@@ -1,0 +1,8 @@
+name: ""
+description: ""
+
+baseurl: "/ehweb"
+
+paginate: 10
+
+permalink: pretty
