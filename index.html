@@ -45,40 +45,7 @@ title: home
     <body>
 
           <!-- Make sure all your bars are the first things in your <body> -->
-      <header class="bar-title"  style="background-color: #efefef;background-image: none;border: none;">
-        <h1 class="title" style="color:#0882f0">Hive</h1>
-      </header>
 
-      <nav class="bar-tab" style="background-color: #efefef;background-image: none;border: none;">
-          <ul class="tab-inner">
-            <li class="tab-item active">
-              <a href="#"><i class="icon-home icon-2x"></i></a>
-            </li>
-            <li class="tab-item">
-              <a href="#"><i class="icon-user icon-2x"></i></a>
-            </li>
-            <li class="tab-item">
-              <a href="#"><i class="icon-cog icon-2x"></i></a>
-            </li>
-            <li class="tab-item">
-              <a href="#"><i class="icon-info-sign icon-2x"></i></a>
-            </li>            
-          </ul>
-      </nav>
-
-      <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-      <div class="content">
-        <div class="content-padded">
-          <h1 style="text-align:center"> You just need your id to start. </h1>
-          <form>
-            <input type="text" placeholder="Your id">
-            <a class="button-positive button-block">Play</a>
-        </form>
-        </div>
-
-        
-
-      </div>
 
 
         <script src="{{ site.baseurl }}/assets/js/libs/jquery-2.0.3.min.js"></script>
@@ -86,6 +53,16 @@ title: home
         <script src="{{ site.baseurl }}/assets/js/libs/backbone-min.js"></script>
         <script src="{{ site.baseurl }}/assets/js/libs/ratchet.js"></script>
         <script src="{{ site.baseurl }}/assets/js/libs/helper.js"></script>
+
+        <script src="{{ site.baseurl }}/assets/js/app/main.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/app/utils/templates.js"></script>
+        <!--<script src="{{ site.baseurl }}/assets/js/app/models/EmployeeModel.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/app/adapters/memory-adapter.js"></script>-->
+        <script src="{{ site.baseurl }}/assets/js/app/routers/AppRouter.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/app/views/HomeView.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/app/views/ChallengeView.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/app/views/PlayerView.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/app/views/StatsView.js"></script>        
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--<script>
