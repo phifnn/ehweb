@@ -1,0 +1,57 @@
+li {
+    text-align:center;
+    margin:auto;
+}
+.choices {
+    margin:4px;
+
+    /*float:left;*/
+}
+
+.choices label {
+    float:left;
+    width:170px;
+    margin:4px;
+    background-color:#EFEFEF;
+    border-radius:4px;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+
+}
+
+.choices label span {
+    text-align:center;
+    font-size: 11px;
+    padding:13px 0px;
+    display:block;
+}
+
+.choices label input {
+    position:absolute;
+    top:-20px;
+}
+
+.choices input:checked + span {
+    background-color:#404040;
+    color:#F7F7F7;
+}
+.choices .red {
+    background-color:#F21111;
+    color:#333;
+}
+
+.choices .blue {
+    background-color:#00BFFF;
+    color:#333;
+}
+
+
+.choices .green {
+    background-color:#A3D900;
+    color:#333;
+}
+
+.choices .yellow {
+    background-color:#FFCC00;
+    color:#333;
+}

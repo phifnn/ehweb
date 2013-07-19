@@ -3,7 +3,13 @@
     <div class="slider">
         <ul>
           <% _.each(data, function(challenge) { %> 
-            <li><img src="<%= challenge.sub %>"></li>
+            <li>
+                <div class="choices">
+    <label class="red"><input type="radio" name="toggle"><span>Nope! I don't like it.</span></label>
+    <label class="green"><input type="radio" name="toggle"><span>Yep! I like it.</span></label>    
+</div>
+                <div><img src="<%= challenge.sub %>"></div>
+            </li>
           <% }); %>
   </ul>
 </div>
