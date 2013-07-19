@@ -1,3 +1,10 @@
 <header class="bar-title" style="background-color: #efefef;background-image: none;border: none;"><a class="button-prev" href="#">Back</a><h1 class="title">Challenge </h1></header>
 <div class='content'>
+    <div class="slider">
+        <ul>
+          <% _.each(data, function(challenge) { %> 
+            <li><img src="<%= challenge.sub %>"></li>
+          <% }); %>
+  </ul>
+</div>
 </div>
