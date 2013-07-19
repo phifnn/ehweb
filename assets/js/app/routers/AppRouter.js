@@ -25,16 +25,17 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
 
     challenge: function () {
-        app.challengeView = new app.views.ChallengeView();
-        $('#main-section').html(app.challengeView.render().el);
-        /*var employee = new app.models.Employee({id: id});
-        employee.fetch({
+        //app.challengeView = new app.views.ChallengeView();
+        //$('#main-section').html(app.challengeView.render().el);
+        var game = new app.models.Game();
+        game.fetch({
             success: function (data) {
                 // Note that we could also 'recycle' the same instance of EmployeeFullView
                 // instead of creating new instances
-                app.slider.slidePage(new app.views.EmployeeView({model: data}).render().$el);
+                //app.slider.slidePage(new app.views.EmployeeView({model: data}).render().$el);
+                $('#main-section').html(new app.views.ChallengeView({model:data}).render().el);
             }
-        });*/
+        });
 
     },
 
