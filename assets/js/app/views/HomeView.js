@@ -10,17 +10,18 @@ app.views.HomeView = Backbone.View.extend({
         //$('.content', this.el).append('<span>Hello</span>');
         return this;
     },
-/*
+
     events: {
-        "keyup .search-key":    "search",
-        "keypress .search-key": "onkeypress"
+        "click #btn-home-play":    "startPlay"
+        //"keypress .search-key": "onkeypress"
     },
 
-    search: function (event) {
-        var key = $('.search-key').val();
-        this.searchResults.fetch({reset: true, data: {name: key}});
+    startPlay: function (event) {
+        //var key = $('.search-key').val();
+        //this.searchResults.fetch({reset: true, data: {name: key}});
+        app.router.navigate("challenge", {trigger: true});
     },
-
+/*
     onkeypress: function (event) {
         if (event.keyCode === 13) { // enter key pressed
             event.preventDefault();
