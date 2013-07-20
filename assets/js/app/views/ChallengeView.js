@@ -1,12 +1,17 @@
 app.views.ChallengeView = Backbone.View.extend({
 /*
     initialize: function () {
-        this.searchResults = new app.models.EmployeeCollection();
-        this.searchresultsView = new app.views.EmployeeListView({model: this.searchResults});
-    },
-*/
+        this.challengeList = new app.models.ChallengeCollection();
+        this.challengeList.fetch({
+            success: function (data) {
+                //$('#main-section').html(new app.views.ChallengeView({model:data}).render().el);
+                render();
+            }
+            });
+    },*/
+
     render: function () {
-        this.$el.html(this.template());
+        this.$el.html(this.template({data:this.model.toJSON()}));
        // $('.content', this.el).append(this.searchresultsView.render().el);
         return this;
     },

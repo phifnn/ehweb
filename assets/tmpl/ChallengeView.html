@@ -1,3 +1,17 @@
 <header class="bar-title" style="background-color: #efefef;background-image: none;border: none;"><a class="button-prev" href="#">Back</a><h1 class="title">Challenge </h1></header>
 <div class='content'>
+    <div class="slider">
+        <ul>
+          <% _.each(data, function(challenge) { %> 
+            <li>
+                
+                <div><img src="<%= challenge.sub %>"></div>
+                <div class="choices">
+    <label class="red"><input type="radio" name="toggle"><span>Nope! I don't like it.</span></label>
+    <label class="green"><input type="radio" name="toggle"><span>Yep! I like it.</span></label>    
+</div>
+            </li>
+          <% }); %>
+  </ul>
+</div>
 </div>
