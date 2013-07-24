@@ -1,0 +1,87 @@
+// Import Google Web Fonts
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+// Typography Colors
+$header-font-color: #444444 !default;
+$header-link-color: #d04526 !default;
+$header-link-hover-color: #c03d20 !default;
+$body-font-color: #555555 !default;
+$body-link-color: #d04526 !default;
+$body-link-hover-color: #c03d20 !default;
+
+// User Interface Colors
+$global-bg-color: #ecf0f1;
+$navbar-color: #1abc9c;
+$navbar-link-color: #fff;
+
+$primary-color: #1abc9c;
+$secondary-color: #42a35a;
+$default-color: #f2f2f2;
+$info-color: #4a4d50;
+$danger-color: #ca3838;
+$warning-color: #f6b83f;
+$success-color: #58c026;
+
+$primary-hover-color: #58b2fa;
+$secondary-hover-color: #6dbb80;
+$default-hover-color: #ffffff;
+$info-hover-color: #868d92;
+$danger-hover-color: #f14f4f;
+$warning-hover-color: #fdd27f;
+$success-hover-color: #66d92f;
+
+$horizontal-rule-color: #ccc !default;
+
+$black: #000;
+$white: #fff;
+
+// Typography
+$font-family: "Open Sans";
+$font-style-italic: italic;
+
+// Font Weights
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-medium: 400;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$font-weight-thin: 300;
+
+$header-font-weight: $font-weight-thin;
+$body-font-weight: $font-weight-regular;
+$type-font-weight: $font-weight-regular;
+$link-font-weight: $font-weight-regular;
+$button-font-weight: $font-weight-semibold;
+$tabs-font-weight: $font-weight-semibold;
+
+$ratio: golden();						// Ratio for Modular Scale
+$base-font-size: 16px !default;
+$importantNum: 78px !default;
+$base-size: $base-font-size $importantNum;
+
+// Sizing
+$xsmall: ms(-2);
+$small: ms(-1);
+$norm: ms(0);	// $base-font-size (16px == default)
+$larger: 3;
+$xlarge: 4;
+
+@mixin no-pretty{
+	border:none;
+	background-image:none;
+	box-shadow:none;
+	text-shadow:none;
+	border-radius:0px;
+}
+
+@mixin font-size($size, $is-important: false) {
+  $size: if(unitless($size), $size, $size / 1px);
+
+  @if $is-important {
+    font-size: $size + px !important;
+    font-size: ($size / strip-units($base-font-size)) + rem !important;
+  } @else {
+    font-size: $size + px;
+    font-size: ($size / strip-units($base-font-size)) + rem;
+  }
+}

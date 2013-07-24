@@ -1,0 +1,58 @@
+@import "compass";
+@import "vars";
+
+//body
+body{
+	background-color:$global-bg-color;
+	font-family: $font-family;
+    font-weight: $body-font-weight;
+}
+
+//h1 { @include font-size(42);}
+//h2 { @include font-size(30);}
+
+//Nav Bar
+.bar-title{
+	font-family: $font-family;
+    font-weight: $header-font-weight;
+	background-color:$navbar-color;
+	@include no-pretty;
+	.title{
+		font-family: $font-family;
+    	font-weight: $header-font-weight;
+	}
+	
+}
+//Footer
+.bar-footer{
+	border:none;
+} 
+//button
+[class*="button"]{
+	font-family: $font-family;
+  	font-weight: $button-font-weight;
+	@include no-pretty;
+	&:active{
+		background-color:#CCC;
+	}
+}
+.button-main{
+	background-color:$default-color;
+	&:active{
+		background-color:darken($default-color,30%);
+	}
+	
+}
+.button-positive{
+	background-color:$primary-color;
+	&:active{
+		background-color:darken($primary-color,30%);
+	}	
+}
+.button-negative{
+	background-color:$warning-color;
+	&:active{
+		background-color:darken($default-color,30%);
+	}
+	
+}
