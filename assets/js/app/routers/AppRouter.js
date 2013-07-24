@@ -2,6 +2,7 @@ app.routers.AppRouter = Backbone.Router.extend({
 
     routes: {
         "": "home",
+        "login": "login",
         "challenge": "challenge",
         "player": "player",
         "stats": "stats"
@@ -17,6 +18,18 @@ app.routers.AppRouter = Backbone.Router.extend({
        // if (!app.homeView) {
             app.homeView = new app.views.HomeView();
             $('#main-section').html(app.homeView.render().el);
+        /*} else {
+            console.log('reusing home view');
+            app.homeView.delegateEvents(); // delegate events when the view is recycled
+        }*/
+        //app.slider.slidePage(app.homeView.$el);
+    },
+
+    login: function () {
+        // Since the home view never changes, we instantiate it and render it only once
+       // if (!app.homeView) {
+            app.loginView = new app.views.LoginView();
+            $('#main-section').html(app.loginView.render().el);
         /*} else {
             console.log('reusing home view');
             app.homeView.delegateEvents(); // delegate events when the view is recycled

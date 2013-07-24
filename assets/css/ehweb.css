@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../sass/sass/_base.scss */
+body {
+  background-color: #ecf0f1;
+  font-family: "Open Sans";
+  font-weight: 400;
+}
+
+/* line 15, ../sass/sass/_base.scss */
+.bar-title {
+  font-family: "Open Sans";
+  font-weight: 300;
+  background-color: #1abc9c;
+  border: none;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 0px;
+}
+/* line 20, ../sass/sass/_base.scss */
+.bar-title .title {
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
+/* line 27, ../sass/sass/_base.scss */
+.bar-footer {
+  border: none;
+  height: inherit;
+}
+
+/* line 32, ../sass/sass/_base.scss */
+[class*="button"] {
+  font-family: "Open Sans";
+  font-weight: 600;
+  border: none;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 0px;
+}
+/* line 36, ../sass/sass/_base.scss */
+[class*="button"]:active {
+  background-color: #CCC;
+}
+
+/* line 40, ../sass/sass/_base.scss */
+.button-main {
+  background-color: #f2f2f2;
+}
+/* line 42, ../sass/sass/_base.scss */
+.button-main:active {
+  background-color: #a5a5a5;
+}
+
+/* line 47, ../sass/sass/_base.scss */
+.button-positive {
+  background-color: #1abc9c;
+}
+/* line 49, ../sass/sass/_base.scss */
+.button-positive:active {
+  background-color: #07362c;
+}
+
+/* line 53, ../sass/sass/_base.scss */
+.button-negative {
+  background-color: #f6b83f;
+}
+/* line 55, ../sass/sass/_base.scss */
+.button-negative:active {
+  background-color: #a5a5a5;
+}
