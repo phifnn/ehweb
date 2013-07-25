@@ -17,7 +17,7 @@ app.routers.AppRouter = Backbone.Router.extend({
         // Since the home view never changes, we instantiate it and render it only once
        // if (!app.homeView) {
             app.homeView = new app.views.HomeView();
-            $('#main-section').html(app.homeView.render().el);
+            $('#main-container').html(app.homeView.render().el);
         /*} else {
             console.log('reusing home view');
             app.homeView.delegateEvents(); // delegate events when the view is recycled
@@ -29,7 +29,7 @@ app.routers.AppRouter = Backbone.Router.extend({
         // Since the home view never changes, we instantiate it and render it only once
        // if (!app.homeView) {
             app.loginView = new app.views.LoginView();
-            $('#main-section').html(app.loginView.render().el);
+            $('#main-container').html(app.loginView.render().el);
         /*} else {
             console.log('reusing home view');
             app.homeView.delegateEvents(); // delegate events when the view is recycled
@@ -46,7 +46,7 @@ app.routers.AppRouter = Backbone.Router.extend({
                 // Note that we could also 'recycle' the same instance of EmployeeFullView
                 // instead of creating new instances
                 //app.slider.slidePage(new app.views.EmployeeView({model: data}).render().$el);
-                $('#main-section').html(new app.views.ChallengeView({model:data}).render().el);
+                $('#main-container').html(new app.views.ChallengeView({model:data}).render().el);
             }
         });
     },

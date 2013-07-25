@@ -39,19 +39,30 @@ title: home
 
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ratchet.css">
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/font-awesome.min.css">
+        <!--<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/mmenu.css">-->
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ehweb.css">
         <script src="{{ site.baseurl }}/assets/js/libs/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-
-          <section id="main-section"></section>
+        <input type="checkbox" id="nav-handler">
+        <nav id="nav">
+            <ul>
+                <li><a href="#"><i class="icon-dribbble icon-large"></i>Play</a></li>
+                <li><a href="#"><i class="icon-calendar-empty icon-large"></i>Stats</a></li>
+                <li><a href="#"><i class="icon-cog icon-large"></i>Settings</a></li>
+                <li><a href="#"><i class="icon-question-sign icon-large"></i>Help</a></li>
+                <li><a href="#"><i class="icon-off icon-large"></i>Exit</a></li>
+            </ul>
+        </nav>
+        <section id="main-container"></section>
 
         <script src="{{ site.baseurl }}/assets/js/libs/jquery-2.0.3.min.js"></script>
         <script src="{{ site.baseurl }}/assets/js/libs/underscore-min.js"></script>
         <script src="{{ site.baseurl }}/assets/js/libs/backbone-min.js"></script>
         <script src="{{ site.baseurl }}/assets/js/libs/ratchet.js"></script>
         <script src="{{ site.baseurl }}/assets/js/libs/helper.js"></script>
+        <!--<script src="{{ site.baseurl }}/assets/js/libs/jquery.mmenu.min.js"></script>-->
 
         <script src="{{ site.baseurl }}/assets/js/app/main.js"></script>
         <script src="{{ site.baseurl }}/assets/js/app/utils/templates.js"></script>

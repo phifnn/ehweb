@@ -13,4 +13,11 @@ $(document).on("ready", function () {
             app.router = new app.routers.AppRouter();
             Backbone.history.start();
         });
+    $("#menu").mmenu({
+   searchfield : false,
+   counters    : true,
+    configuration: {
+      pageNodetype: "section"
+   }   
+});
 });

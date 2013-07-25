@@ -11,30 +11,30 @@ body {
   font-weight: 400;
 }
 
-/* line 15, ../sass/sass/_base.scss */
+/* line 12, ../sass/sass/_base.scss */
 .bar-title {
   font-family: "Open Sans";
   font-weight: 300;
-  background-color: #1abc9c;
+  background-color: #2980b9;
   border: none;
   background-image: none;
   box-shadow: none;
   text-shadow: none;
   border-radius: 0px;
 }
-/* line 20, ../sass/sass/_base.scss */
+/* line 17, ../sass/sass/_base.scss */
 .bar-title .title {
   font-family: "Open Sans";
   font-weight: 300;
 }
 
-/* line 27, ../sass/sass/_base.scss */
+/* line 24, ../sass/sass/_base.scss */
 .bar-footer {
   border: none;
   height: inherit;
 }
 
-/* line 32, ../sass/sass/_base.scss */
+/* line 29, ../sass/sass/_base.scss */
 [class*="button"] {
   font-family: "Open Sans";
   font-weight: 600;
@@ -44,34 +44,124 @@ body {
   text-shadow: none;
   border-radius: 0px;
 }
-/* line 36, ../sass/sass/_base.scss */
+/* line 33, ../sass/sass/_base.scss */
 [class*="button"]:active {
   background-color: #CCC;
 }
 
-/* line 40, ../sass/sass/_base.scss */
+/* line 37, ../sass/sass/_base.scss */
 .button-main {
   background-color: #f2f2f2;
 }
-/* line 42, ../sass/sass/_base.scss */
+/* line 39, ../sass/sass/_base.scss */
 .button-main:active {
   background-color: #a5a5a5;
 }
 
-/* line 47, ../sass/sass/_base.scss */
+/* line 44, ../sass/sass/_base.scss */
 .button-positive {
   background-color: #1abc9c;
 }
-/* line 49, ../sass/sass/_base.scss */
+/* line 46, ../sass/sass/_base.scss */
 .button-positive:active {
   background-color: #07362c;
 }
 
-/* line 53, ../sass/sass/_base.scss */
+/* line 50, ../sass/sass/_base.scss */
 .button-negative {
   background-color: #f6b83f;
 }
-/* line 55, ../sass/sass/_base.scss */
+/* line 52, ../sass/sass/_base.scss */
 .button-negative:active {
   background-color: #a5a5a5;
+}
+
+/* line 58, ../sass/sass/_base.scss */
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  z-index: 1;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: #95a5a6;
+  -webkit-transition: opacity 0s ease;
+  -webkit-transition-delay: 0.25s;
+  -moz-transition: opacity 0s ease 0.25s;
+  -o-transition: opacity 0s ease 0.25s;
+  transition: opacity 0s ease 0.25s;
+}
+
+/* line 70, ../sass/sass/_base.scss */
+#nav-handler:checked ~ #nav {
+  opacity: 1;
+  -webkit-transition: opacity 0s ease;
+  -webkit-transition-delay: 0s;
+  -moz-transition: opacity 0s ease 0s;
+  -o-transition: opacity 0s ease 0s;
+  transition: opacity 0s ease 0s;
+}
+
+/* line 74, ../sass/sass/_base.scss */
+#nav ul li {
+  display: block;
+  clear: both;
+}
+/* line 77, ../sass/sass/_base.scss */
+#nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 83, ../sass/sass/_base.scss */
+#main-container {
+  display: block;
+  position: relative;
+  height: 100%;
+  z-index: 5;
+  -webkit-transition: -moz-transform 0s ease-in-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition: -moz-transform 0s ease-in-out 0s;
+  -o-transition: -moz-transform 0s ease-in-out 0s;
+  transition: -moz-transform 0s ease-in-out 0s;
+  -webkit-transform: translate3D(0, 0, 0);
+  -moz-transform: translate3D(0, 0, 0);
+  -ms-transform: translate3D(0, 0, 0);
+  -o-transform: translate3D(0, 0, 0);
+  transform: translate3D(0, 0, 0);
+  /*transform: translate3D(0,0,0);
+  -moz-transform: translate3D(0,0,0);
+  -webkit-transform: translate3D(0,0,0);
+  transition: -moz-transform .25s ease-in-out;
+  -moz-transition: -moz-transform .25s ease-in-out;
+  -webkit-transition: -webkit-transform .25s ease-in-out;*/
+}
+
+/* Translate main container when nav handler is checked */
+/* line 100, ../sass/sass/_base.scss */
+#nav-handler:checked ~ #main-container {
+  -webkit-transform: translate3D(80%, 0, 0);
+  -moz-transform: translate3D(80%, 0, 0);
+  -ms-transform: translate3D(80%, 0, 0);
+  -o-transform: translate3D(80%, 0, 0);
+  transform: translate3D(80%, 0, 0);
+  /* X value must be same as Nav width */
+}
+
+/* line 104, ../sass/sass/_base.scss */
+#content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 44px 0 0 0;
+  /* Top padding must be same as header height */
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  z-index: -1;
 }
