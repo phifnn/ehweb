@@ -33,9 +33,9 @@ title: home
         -->
 
         <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
-        <!--
+        
         <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
-        -->
+        
 
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ratchet.css">
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/font-awesome.min.css">        
@@ -59,6 +59,7 @@ title: home
         <!--<script src="{{ site.baseurl }}/assets/js/app/adapters/memory-adapter.js"></script>-->
         <script src="{{ site.baseurl }}/assets/js/app/routers/AppRouter.js"></script>
         <script src="{{ site.baseurl }}/assets/js/app/views/HomeView.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/app/views/HelpView.js"></script>
         <script src="{{ site.baseurl }}/assets/js/app/views/LoginView.js"></script>
         <script src="{{ site.baseurl }}/assets/js/app/views/ChallengeView.js"></script>
         <script src="{{ site.baseurl }}/assets/js/app/views/PlayerView.js"></script>

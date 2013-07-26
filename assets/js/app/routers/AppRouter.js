@@ -1,11 +1,13 @@
 app.routers.AppRouter = Backbone.Router.extend({
 
     routes: {
-        "": "home",
+        "home": "home",
         "login": "login",
         "challenge": "challenge",
         "player": "player",
-        "stats": "stats"
+        "stats": "stats",
+        "help":"help",
+        "":"home"
     },
 
     initialize: function () {
@@ -64,6 +66,13 @@ app.routers.AppRouter = Backbone.Router.extend({
 
     stats: function (id) {
         app.slider.slidePage(new app.views.MapView().render().$el);
+    },
+
+    help: function () {
+        // Since the home view never changes, we instantiate it and render it only once
+       // if (!app.homeView) {
+            app.helpView = new app.views.HelpView();
+            $('#main-container').html(app.helpView.render().el);        
     }
 
 });
