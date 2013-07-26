@@ -16,30 +16,36 @@ body {
   background-color: #ecf0f1;
 }
 
-/* line 15, ../sass/sass/_base.scss */
+/* line 14, ../sass/sass/_base.scss */
+.flatten-input {
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+/* line 20, ../sass/sass/_base.scss */
 .bar-title {
   font-family: "Open Sans";
   font-weight: 300;
-  background-color: #3498db;
+  background-color: #1abc9c;
   border: none;
   background-image: none;
   box-shadow: none;
   text-shadow: none;
   border-radius: 0px;
 }
-/* line 20, ../sass/sass/_base.scss */
+/* line 25, ../sass/sass/_base.scss */
 .bar-title .title {
   font-family: "Open Sans";
   font-weight: 300;
 }
 
-/* line 27, ../sass/sass/_base.scss */
+/* line 32, ../sass/sass/_base.scss */
 .bar-footer {
   border: none;
   /* height:inherit;*/
 }
 
-/* line 32, ../sass/sass/_base.scss */
+/* line 37, ../sass/sass/_base.scss */
 [class*="button"] {
   font-family: "Open Sans";
   font-weight: 600;
@@ -49,55 +55,59 @@ body {
   text-shadow: none;
   border-radius: 0px;
 }
-/* line 36, ../sass/sass/_base.scss */
+/* line 41, ../sass/sass/_base.scss */
 [class*="button"]:active {
   background-color: #CCC;
 }
 
-/* line 40, ../sass/sass/_base.scss */
+/* line 45, ../sass/sass/_base.scss */
 .button-main {
   background-color: #f2f2f2;
+  color: #2c3e50;
 }
-/* line 42, ../sass/sass/_base.scss */
+/* line 48, ../sass/sass/_base.scss */
 .button-main:active {
   background-color: #a5a5a5;
 }
 
-/* line 47, ../sass/sass/_base.scss */
+/* line 53, ../sass/sass/_base.scss */
 .button-positive {
-  background-color: #3498db;
+  background-color: #1abc9c;
+  color: #ecf0f1;
 }
-/* line 49, ../sass/sass/_base.scss */
+/* line 56, ../sass/sass/_base.scss */
 .button-positive:active {
-  background-color: #124364;
+  background-color: #07362c;
 }
 
-/* line 53, ../sass/sass/_base.scss */
+/* line 60, ../sass/sass/_base.scss */
 .button-negative {
   background-color: #f6b83f;
+  color: #ecf0f1;
 }
-/* line 55, ../sass/sass/_base.scss */
+/* line 63, ../sass/sass/_base.scss */
 .button-negative:active {
   background-color: #a5a5a5;
 }
 
-/* line 60, ../sass/sass/_base.scss */
+/* line 68, ../sass/sass/_base.scss */
 .button-green {
-  background-color: #1abc9c;
+  background-color: #16a085;
+  color: #ecf0f1;
 }
-/* line 62, ../sass/sass/_base.scss */
+/* line 71, ../sass/sass/_base.scss */
 .button-green:active {
   background-color: #a5a5a5;
 }
 
 /* Hide nav handler checkbox */
-/* line 69, ../sass/sass/_base.scss */
+/* line 78, ../sass/sass/_base.scss */
 #nav-handler {
   display: none;
 }
 
 /* Header */
-/* line 74, ../sass/sass/_base.scss */
+/* line 83, ../sass/sass/_base.scss */
 #header {
   position: static;
   top: 0;
@@ -105,7 +115,7 @@ body {
   width: 100%;
   height: 44px;
   z-index: 2;
-  background: #3498db;
+  background: #1abc9c;
   color: #ecf0f1;
   padding: 5px;
   -webkit-box-sizing: border-box;
@@ -121,7 +131,7 @@ body {
   text-shadow: none;
   border-radius: 0px;
 }
-/* line 87, ../sass/sass/_base.scss */
+/* line 96, ../sass/sass/_base.scss */
 #header .title {
   font-family: "Open Sans";
   font-weight: 300;
@@ -129,7 +139,7 @@ body {
   text-align: center;
 }
 
-/* line 94, ../sass/sass/_base.scss */
+/* line 103, ../sass/sass/_base.scss */
 #nav {
   position: fixed;
   top: 0;
@@ -147,17 +157,17 @@ body {
   transition: opacity 0s ease 0.25s;
 }
 
-/* line 106, ../sass/sass/_base.scss */
+/* line 115, ../sass/sass/_base.scss */
 #nav-handler:checked ~ #nav {
   opacity: 1;
 }
 
-/* line 109, ../sass/sass/_base.scss */
+/* line 118, ../sass/sass/_base.scss */
 #nav ul li {
   display: block;
   clear: both;
 }
-/* line 112, ../sass/sass/_base.scss */
+/* line 121, ../sass/sass/_base.scss */
 #nav ul li a {
   display: block;
   width: 100%;
@@ -167,7 +177,7 @@ body {
   text-align: left;
 }
 
-/* line 122, ../sass/sass/_base.scss */
+/* line 131, ../sass/sass/_base.scss */
 #out-container {
   display: block;
   position: relative;
@@ -186,7 +196,7 @@ body {
 }
 
 /* Translate main container when nav handler is checked */
-/* line 133, ../sass/sass/_base.scss */
+/* line 142, ../sass/sass/_base.scss */
 #nav-handler:checked ~ #out-container {
   -webkit-transform: translate3D(80%, 0, 0);
   -moz-transform: translate3D(80%, 0, 0);
@@ -196,7 +206,7 @@ body {
   /* X value must be same as Nav width */
 }
 
-/* line 137, ../sass/sass/_base.scss */
+/* line 146, ../sass/sass/_base.scss */
 #content-container {
   position: absolute;
   top: 44px;

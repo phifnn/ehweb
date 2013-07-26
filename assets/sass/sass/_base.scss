@@ -11,6 +11,11 @@ body{
     background-color:$global-bg-color;
 }
 
+.flatten-input{
+    border-radius:0px;
+    box-shadow:none;
+}
+
 //Nav Bar
 .bar-title{
 	font-family: $font-family;
@@ -39,6 +44,7 @@ body{
 }
 .button-main{
 	background-color:$default-color;
+    color:$global-font-dark;
 	&:active{
 		background-color:darken($default-color,30%);
 	}
@@ -46,12 +52,14 @@ body{
 }
 .button-positive{
 	background-color:$primary-color;
+    color:$global-font-light;
 	&:active{
 		background-color:darken($primary-color,30%);
 	}	
 }
 .button-negative{
 	background-color:$warning-color;
+    color:$global-font-light;
 	&:active{
 		background-color:darken($default-color,30%);
 	}
@@ -59,6 +67,7 @@ body{
 }
 .button-green{
     background-color:$secondary-color;
+    color:$global-font-light;
     &:active{
         background-color:darken($default-color,30%);
     }
