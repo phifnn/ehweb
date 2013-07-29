@@ -14,7 +14,7 @@ $(document).on("ready", function () {
             Backbone.history.start();
         });
 });
-/*
+
 $(function() {
     FastClick.attach(document.body);
-});*/
+});
