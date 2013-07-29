@@ -149,7 +149,7 @@ body {
   z-index: 1;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: #ecf0f1;
+  background-color: #bdc3c7;
   -webkit-transition: opacity 0.25s ease-in-out;
   -webkit-transition-delay: 0;
   -moz-transition: opacity 0.25s ease-in-out 0;
@@ -172,6 +172,7 @@ body {
   margin-bottom: 1px;
   padding-left: 5px;
   text-align: left;
+  text-decoration: none;
 }
 
 #wrapper-container {
@@ -211,6 +212,11 @@ body {
   text-shadow: none;
   border-radius: 0px;
   margin: 15px 15px;
+}
+
+.topcoat-icon-button--quiet {
+  margin-bottom: 1px;
+  color: #ecf0f1;
 }
 
 .topcoat-text-input {

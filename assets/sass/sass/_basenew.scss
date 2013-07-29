@@ -85,7 +85,7 @@ body {
     z-index: 1;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    background-color:$global-bg-color;
+    background-color:$slide-nav-bar-color;
     @include single-transition(opacity,0.25s,ease-in-out,0);
 }
 #nav-handler:checked ~ #nav {
@@ -101,6 +101,7 @@ body {
         margin-bottom:1px;
         padding-left:5px;
         text-align:left;
+        text-decoration:none;
     }
 }
 
@@ -126,6 +127,10 @@ body {
   //@include flat-with-border;
   @include no-pretty;
   @include margins(15px);
+}
+.topcoat-icon-button--quiet{
+  margin-bottom:1px;
+  color:$global-bg-color;
 }
 //text
 .topcoat-text-input{
