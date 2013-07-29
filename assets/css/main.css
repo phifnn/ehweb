@@ -141,8 +141,10 @@ body {
 }
 
 .topcoat-button--cta {
+  border: none;
   background-image: none;
   box-shadow: none;
+  text-shadow: none;
   border-radius: 0px;
   margin: 15px 15px;
 }
@@ -154,4 +156,7 @@ body {
   background-image: none;
   box-shadow: none;
   border-radius: 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
