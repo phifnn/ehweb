@@ -91,6 +91,15 @@ $xlarge: 4;
 	border-radius:0px;
 }
 
+@mixin flat-with-border{
+  background-image:none;
+  box-shadow:none;
+  border-radius:0px;
+}
+
+@mixin margins($dim-top:10px,$dim-left:$dim-top){
+  margin:$dim-top $dim-left;
+}
 @mixin font-size($size, $is-important: false) {
   $size: if(unitless($size), $size, $size / 1px);
 
