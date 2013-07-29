@@ -120,6 +120,10 @@ body {
   display: inline;
 }
 
+#main-container {
+  overflow-x: hidden;
+}
+
 .eh-title {
   font-family: "Open Sans";
   font-weight: 300;
