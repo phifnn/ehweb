@@ -214,11 +214,11 @@ body {
   margin: 15px 15px;
 }
 
-.topcoat-icon-button--quiet {
-  margin-bottom: 1px;
-  color: #ecf0f1;
-}
-
+ /*
+.topcoat-icon-button--quiet{
+  margin-bottom:1px;
+  color:$global-bg-color;
+}*/
 .topcoat-text-input {
   margin: 0px 0px 10px 0px;
   width: 100%;
