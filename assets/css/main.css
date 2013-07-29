@@ -1,135 +1,145 @@
 @charset "UTF-8";
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../sass/_base.scss */
+* html {
+  font-size: 100%;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #ecf0f1;
+  background: #ecf0f1;
   font-family: "Open Sans";
   font-weight: 400;
+  color: #555555;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  width: 100%;
+  min-width: 0;
 }
 
-/* line 15, ../sass/_base.scss */
-.bar-title {
+.hide {
+  display: none;
+}
+
+.hide.active, .show {
+  display: block;
+}
+
+.fixed {
+  position: fixed;
+}
+.fixed.pinned {
+  position: absolute;
+}
+
+.unfixed {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.page {
+  *zoom: 1;
+  max-width: 640px;
+  _width: 640px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-1 {
+  width: 12.5%;
+  float: left;
+  margin-right: 0%;
+  display: inline;
+}
+
+.col-2 {
+  width: 25%;
+  float: left;
+  margin-right: 0%;
+  display: inline;
+}
+
+.col-3 {
+  width: 37.5%;
+  float: left;
+  margin-right: 0%;
+  display: inline;
+}
+
+.col-4 {
+  width: 50%;
+  float: left;
+  margin-right: 0%;
+  display: inline;
+}
+
+.col-5 {
+  width: 62.5%;
+  float: left;
+  margin-right: 0%;
+  display: inline;
+}
+
+.col-6 {
+  width: 75%;
+  float: left;
+  margin-right: 0%;
+  display: inline;
+}
+
+.col-7 {
+  width: 87.5%;
+  float: left;
+  margin-right: 0%;
+  display: inline;
+}
+
+.col-8 {
+  width: 100%;
+  float: left;
+  margin-right: 0%;
+  display: inline;
+}
+
+.eh-title {
   font-family: "Open Sans";
   font-weight: 300;
-  background-color: #1abc9c;
-  border: none;
-  background-image: none;
-  box-shadow: none;
-  text-shadow: none;
-  border-radius: 0px;
+  background-color: #34495e;
 }
-/* line 20, ../sass/_base.scss */
-.bar-title .title {
+.eh-title .eh-title-text {
   font-family: "Open Sans";
   font-weight: 300;
+  color: #ecf0f1;
 }
 
-/* line 20, ../sass/_base.scss */
-.bar-footer {
-  border: none;
+.content {
+  width: 100%;
+  padding: 10px;
 }
 
-/* line 24, ../sass/_base.scss */
-[class*="button"] {
-  font-family: "Open Sans";
-  font-weight: 600;
-  border: none;
-  background-image: none;
-  box-shadow: none;
-  text-shadow: none;
+.topcoat-text-input {
   border-radius: 0px;
-}
-/* line 28, ../sass/_base.scss */
-[class*="button"]:active {
-  background-color: #CCC;
-}
-
-/* line 32, ../sass/_base.scss */
-.button-main {
-  background-color: #f2f2f2;
-}
-/* line 34, ../sass/_base.scss */
-.button-main:active {
-  background-color: #a5a5a5;
-}
-
-/* line 39, ../sass/_base.scss */
-.button-positive {
-  background-color: #1abc9c;
-}
-/* line 41, ../sass/_base.scss */
-.button-positive:active {
-  background-color: #07362c;
-}
-
-/* line 45, ../sass/_base.scss */
-.button-negative {
-  background-color: #f6b83f;
-}
-/* line 47, ../sass/_base.scss */
-.button-negative:active {
-  background-color: #a5a5a5;
-}
-
-
-.slider, .slider > li {
-width: 100%;
-height: 300px;
-}
-.choices {
-    margin:4px;
-
-    /*float:left;*/
-}
-
-.choices label {
-    float:left;
-    width:170px;
-    margin:4px;
-    background-color:#EFEFEF;
-    border-radius:4px;
-    border:1px solid #D0D0D0;
-    overflow:auto;
-
-}
-
-.choices label span {
-    text-align:center;
-    font-size: 13px;
-    padding:10px 0px;
-    display:block;
-}
-
-.choices label input {
-    position:absolute;
-    top:-20px;
-}
-
-.choices input:checked + span {
-    background-color:#404040;
-    color:#F7F7F7;
-}
-.choices .red {
-    background-color:#F21111;
-    color:#333;
-}
-
-.choices .blue {
-    background-color:#00BFFF;
-    color:#333;
-}
-
-
-.choices .green {
-    background-color:#A3D900;
-    color:#333;
-}
-
-.choices .yellow {
-    background-color:#FFCC00;
-    color:#333;
+  margin: 0px 0px 5px 0px;
+  width: 100%;
+  height: 2.5rem;
+  box-shadow: none;
 }

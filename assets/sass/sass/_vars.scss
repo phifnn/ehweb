@@ -1,6 +1,19 @@
 // Import Google Web Fonts
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
+// Basic Grid
+
+$total-columns  : 8;
+$column-width   : 80px;
+$gutter-width   : 0px;
+$grid-padding   : 0px;
+
+$show-grid-backgrounds  : false;
+
+//Font
+$base-font-size: 16px;
+$base-line-height: 24px;
+
 // Typography Colors
 $header-font-color: #444444 !default;
 $header-link-color: #d04526 !default;
@@ -11,16 +24,16 @@ $body-link-hover-color: #c03d20 !default;
 
 // User Interface Colors
 $global-bg-color: #ecf0f1;
-$navbar-color: #1abc9c;
+$navbar-color: #34495e;
 $navbar-link-color: #ecf0f1;
-$slide-nav-bar-color: #1abc9c;
+$slide-nav-bar-color: #95a5a6;
 $global-font-light: #ecf0f1;
-$global-font-dark: #2c3e50;
+$global-font-dark: #34495e;
 
-$primary-color: #1abc9c;
-$secondary-color: #16a085;
+$primary-color: #3498db;
+$secondary-color: #1abc9c;
 $default-color: #f2f2f2;
-$info-color: #4a4d50;
+$info-color: #bdc3c7;
 $danger-color: #ca3838;
 $warning-color: #f6b83f;
 $success-color: #58c026;
@@ -41,6 +54,7 @@ $white: #fff;
 // Typography
 $font-family: "Open Sans";
 $font-style-italic: italic;
+$font-smoothing: antialiased;
 
 // Font Weights
 $font-weight-bold: 700;

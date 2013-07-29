@@ -4,53 +4,45 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../sass/sass/_base.scss */
 body {
   background-color: #ecf0f1;
   font-family: "Open Sans";
   font-weight: 400;
 }
 
-/* line 10, ../sass/sass/_base.scss */
 .content {
   background-color: #ecf0f1;
 }
 
-/* line 14, ../sass/sass/_base.scss */
 .flatten-input {
   border-radius: 0px;
   box-shadow: none;
 }
 
-/* line 18, ../sass/sass/_base.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 23, ../sass/sass/_base.scss */
 .bar-title {
   font-family: "Open Sans";
   font-weight: 300;
-  background-color: #1abc9c;
+  background-color: #34495e;
   border: none;
   background-image: none;
   box-shadow: none;
   text-shadow: none;
   border-radius: 0px;
 }
-/* line 28, ../sass/sass/_base.scss */
 .bar-title .title {
   font-family: "Open Sans";
   font-weight: 300;
 }
 
-/* line 35, ../sass/sass/_base.scss */
 .bar-footer {
   border: none;
   /* height:inherit;*/
 }
 
-/* line 40, ../sass/sass/_base.scss */
 [class*="button"] {
   font-family: "Open Sans";
   font-weight: 600;
@@ -60,71 +52,67 @@ body {
   text-shadow: none;
   border-radius: 0px;
 }
-/* line 44, ../sass/sass/_base.scss */
 [class*="button"]:active {
   background-color: #CCC;
 }
 
-/* line 48, ../sass/sass/_base.scss */
 .button-main {
   background-color: #f2f2f2;
-  color: #2c3e50;
+  color: #34495e;
 }
-/* line 51, ../sass/sass/_base.scss */
 .button-main:active {
   background-color: #a5a5a5;
 }
 
-/* line 56, ../sass/sass/_base.scss */
 .button-positive {
-  background-color: #1abc9c;
+  background-color: #3498db;
   color: #ecf0f1;
 }
-/* line 59, ../sass/sass/_base.scss */
 .button-positive:active {
-  background-color: #07362c;
+  background-color: #124364;
 }
 
-/* line 63, ../sass/sass/_base.scss */
 .button-negative {
   background-color: #f6b83f;
   color: #ecf0f1;
 }
-/* line 66, ../sass/sass/_base.scss */
 .button-negative:active {
   background-color: #a5a5a5;
 }
 
-/* line 71, ../sass/sass/_base.scss */
 .button-green {
-  background-color: #16a085;
+  background-color: #1abc9c;
   color: #ecf0f1;
 }
-/* line 74, ../sass/sass/_base.scss */
 .button-green:active {
   background-color: #a5a5a5;
 }
 
-/* line 79, ../sass/sass/_base.scss */
+.button-info {
+  background-color: #bdc3c7;
+  color: #ecf0f1;
+}
+.button-info:active {
+  background-color: #a5a5a5;
+}
+
 .bar-title [class*="btn-hdr-symbol"] {
   border: none;
   background-image: none;
   box-shadow: none;
   text-shadow: none;
   border-radius: 0px;
-  background-color: #1abc9c;
+  background-color: #34495e;
   color: #ecf0f1;
   font-size: 18px;
 }
 
 /* Hide nav handler checkbox */
-/* line 87, ../sass/sass/_base.scss */
 #nav-handler {
   display: none;
 }
 
 /* Header */
-/* line 92, ../sass/sass/_base.scss */
 #header {
   position: static;
   top: 0;
@@ -132,7 +120,7 @@ body {
   width: 100%;
   height: 44px;
   z-index: 2;
-  background: #1abc9c;
+  background: #34495e;
   color: #ecf0f1;
   padding: 5px;
   -webkit-box-sizing: border-box;
@@ -148,7 +136,6 @@ body {
   text-shadow: none;
   border-radius: 0px;
 }
-/* line 105, ../sass/sass/_base.scss */
 #header .title {
   font-family: "Open Sans";
   font-weight: 300;
@@ -156,7 +143,6 @@ body {
   text-align: center;
 }
 
-/* line 112, ../sass/sass/_base.scss */
 #nav {
   position: fixed;
   top: 0;
@@ -167,24 +153,21 @@ body {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   background-color: #ecf0f1;
-  -webkit-transition: opacity 0s ease;
-  -webkit-transition-delay: 0.25s;
-  -moz-transition: opacity 0s ease 0.25s;
-  -o-transition: opacity 0s ease 0.25s;
-  transition: opacity 0s ease 0.25s;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -webkit-transition-delay: 0;
+  -moz-transition: opacity 0.25s ease-in-out 0;
+  -o-transition: opacity 0.25s ease-in-out 0;
+  transition: opacity 0.25s ease-in-out 0;
 }
 
-/* line 124, ../sass/sass/_base.scss */
 #nav-handler:checked ~ #nav {
   opacity: 1;
 }
 
-/* line 127, ../sass/sass/_base.scss */
 #nav ul li {
   display: block;
   clear: both;
 }
-/* line 130, ../sass/sass/_base.scss */
 #nav ul li a {
   display: block;
   width: 100%;
@@ -194,7 +177,6 @@ body {
   text-align: left;
 }
 
-/* line 140, ../sass/sass/_base.scss */
 #out-container {
   display: block;
   position: relative;
@@ -213,7 +195,6 @@ body {
 }
 
 /* Translate main container when nav handler is checked */
-/* line 151, ../sass/sass/_base.scss */
 #nav-handler:checked ~ #out-container {
   -webkit-transform: translate3D(80%, 0, 0);
   -moz-transform: translate3D(80%, 0, 0);
@@ -223,7 +204,6 @@ body {
   /* X value must be same as Nav width */
 }
 
-/* line 155, ../sass/sass/_base.scss */
 #content-container {
   position: absolute;
   top: 44px;
@@ -234,4 +214,29 @@ body {
   -webkit-overflow-scrolling: touch;
   background: #fff;
   z-index: -1;
+}
+
+#remember-me {
+  display: none;
+}
+
+#remember-me-tick {
+  opacity: 0;
+  font-size: 18px;
+  color: #3498db;
+  -webkit-transition: opacity 0.25s linear;
+  -webkit-transition-delay: 0;
+  -moz-transition: opacity 0.25s linear 0;
+  -o-transition: opacity 0.25s linear 0;
+  transition: opacity 0.25s linear 0;
+}
+
+#remember-me:checked + #remember-me-tick {
+  opacity: 1;
+}
+
+.check-label {
+  display: inline-block;
+  color: #3498db;
+  padding: 10px;
 }
