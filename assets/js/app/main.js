@@ -13,8 +13,5 @@ $(document).on("ready", function () {
             app.router = new app.routers.AppRouter();
             Backbone.history.start();
         });
-});
-
-$(function() {
     FastClick.attach(document.body);
 });
