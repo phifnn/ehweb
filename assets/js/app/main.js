@@ -12,10 +12,11 @@ $(document).on("ready", function () {
         function () {
             app.router = new app.routers.AppRouter();
             Backbone.history.start();
+            window.mySwipe = Swipe($('#slider')[0],{auto:5000});
         });
-    FastClick.attach(document.body);    
+    FastClick.attach(document.body);        
 });
 
-$(window).on("load", function(){
-    window.mySwipe = Swipe(document.getElementById('slider'),{auto:5000});
-});
+//$(window).on("load", function(){
+    //window.mySwipe = Swipe($('#slider')[0],{auto:5000});
+//});
