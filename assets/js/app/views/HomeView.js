@@ -19,7 +19,7 @@ app.views.HomeView = Backbone.View.extend({
     startPlay: function (event) {
         //var key = $('.search-key').val();
         //this.searchResults.fetch({reset: true, data: {name: key}});
-        app.router.navigate("challenge", {trigger: true});
+        app.router.navigate("login", {trigger: true});
     },
 /*
     onkeypress: function (event) {

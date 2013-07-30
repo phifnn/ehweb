@@ -9,18 +9,18 @@ app.views.LoginView = Backbone.View.extend({
         this.$el.html(this.template());
         //$('.content', this.el).append('<span>Hello</span>');
         return this;
-    }/*,
+    },
 
     events: {
-        "click #btn-home-play":    "startPlay"
+        "click #btn-login":    "startPlay"
         //"keypress .search-key": "onkeypress"
     },
 
     startPlay: function (event) {
         //var key = $('.search-key').val();
         //this.searchResults.fetch({reset: true, data: {name: key}});
-        app.router.navigate("login", {trigger: true});
-    },*/
+        app.router.navigate("challenge", {trigger: true});
+    },
 /*
     onkeypress: function (event) {
         if (event.keyCode === 13) { // enter key pressed
