@@ -20,6 +20,7 @@ app.routers.AppRouter = Backbone.Router.extend({
        // if (!app.homeView) {
             app.homeView = new app.views.HomeView();
             $('#main-container').html(app.homeView.render().el);
+            window.mySwipe = Swipe($('#slider')[0],{auto:2500});//Start the slider.
         /*} else {
             console.log('reusing home view');
             app.homeView.delegateEvents(); // delegate events when the view is recycled
