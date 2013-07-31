@@ -4,7 +4,8 @@ app.routers.AppRouter = Backbone.Router.extend({
         "home": "home",
         "login":"login",
         "challenge": "challenge",
-        "player": "player",
+        "settings": "settings",
+        "history": "history",
         "stats": "stats",
         "help":"help",
         "":"home"
@@ -62,19 +63,22 @@ app.routers.AppRouter = Backbone.Router.extend({
         });
     },
 
-    player: function (id) {
-        var employee = new app.models.Employee({id: id});
-        employee.fetch({
-            success: function (data) {
-                // Note that we could also 'recycle' the same instance of EmployeeFullView
-                // instead of creating new instances
-                app.slider.slidePage(new app.views.ReportsView({model: data}).render().$el);
-            }
-        });
+    settings: function (id) {
+        //app.slider.slidePage(new app.views.MapView().render().$el);
+        app.settingsView = new app.views.SettingsView();
+            $('#main-container').html(app.settingsView.render().el);
     },
 
     stats: function (id) {
-        app.slider.slidePage(new app.views.MapView().render().$el);
+        //app.slider.slidePage(new app.views.MapView().render().$el);
+        app.statsView = new app.views.StatsView();
+            $('#main-container').html(app.statsView.render().el);
+    },
+
+    history: function (id) {
+        //app.slider.slidePage(new app.views.MapView().render().$el);
+        app.historyView = new app.views.HistoryView();
+            $('#main-container').html(app.historyView.render().el);
     },
 
     help: function () {

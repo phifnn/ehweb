@@ -1,4 +1,4 @@
-app.views.PlayerView = Backbone.View.extend({
+app.views.SettingsView = Backbone.View.extend({
 /*
     initialize: function () {
         this.searchResults = new app.models.EmployeeCollection();
