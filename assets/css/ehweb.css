@@ -460,6 +460,9 @@ body {
   text-align: center;
 }
 
+.eh-challenge {
+  display: inline-block;
+}
 .eh-challenge .eh-clg-choices {
   margin: 2px;
   display: table;
