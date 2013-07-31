@@ -29,6 +29,35 @@ body{
   left: auto !important;
 }
 
+.quarter {
+  width: 25%;
+}
+.half {
+  width: 50%;
+}
+.three-quarters {
+  width: 75%;
+}
+.third {
+  width: 33.333%;
+}
+.two-thirds {
+  width: 66.666%;
+}
+.full {
+  width: 100%;
+}
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+
 .content{
     background-color:$global-bg-color;
 }
@@ -358,14 +387,21 @@ body{
   background-color:$primary-color;
   color:$global-font-light;
   padding:5px;
-  line-height:44px;
+  line-height:48px;
+  text-align:center
 }
 
 // Challenge styles
 .eh-challenge{
   .eh-clg-choices{
     margin:2px;
-    padding:2px;
+    display:table;
+    width:100%;
+    div{
+      display:table-cell;
+      width:50%;
+      padding-right:3px;
+    }
   }
   .eh-clg-question{
 

@@ -31,6 +31,42 @@ body {
   left: auto !important;
 }
 
+.quarter {
+  width: 25%;
+}
+
+.half {
+  width: 50%;
+}
+
+.three-quarters {
+  width: 75%;
+}
+
+.third {
+  width: 33.333%;
+}
+
+.two-thirds {
+  width: 66.666%;
+}
+
+.full {
+  width: 100%;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
 .content {
   background-color: #ecf0f1;
 }
@@ -420,10 +456,17 @@ body {
   background-color: #3498db;
   color: #ecf0f1;
   padding: 5px;
-  line-height: 44px;
+  line-height: 48px;
+  text-align: center;
 }
 
 .eh-challenge .eh-clg-choices {
   margin: 2px;
-  padding: 2px;
+  display: table;
+  width: 100%;
+}
+.eh-challenge .eh-clg-choices div {
+  display: table-cell;
+  width: 50%;
+  padding-right: 3px;
 }
