@@ -458,6 +458,11 @@ body {
   padding: 5px;
   line-height: 48px;
   text-align: center;
+  -webkit-transition: background-color 0.25s linear;
+  -webkit-transition-delay: 0;
+  -moz-transition: background-color 0.25s linear 0;
+  -o-transition: background-color 0.25s linear 0;
+  transition: background-color 0.25s linear 0;
 }
 
 .eh-challenge {
@@ -472,4 +477,8 @@ body {
   display: table-cell;
   width: 50%;
   padding-right: 3px;
+}
+
+.eh-clg-choices-radio:checked + span {
+  background-color: #1abc9c;
 }
