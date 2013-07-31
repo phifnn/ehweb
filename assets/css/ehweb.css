@@ -10,6 +10,27 @@ body {
   font-weight: 400;
 }
 
+.hide {
+  display: none;
+}
+
+.hide.active, .show {
+  display: block;
+}
+
+.fixed {
+  position: fixed;
+}
+.fixed.pinned {
+  position: absolute;
+}
+
+.unfixed {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
 .content {
   background-color: #ecf0f1;
 }
@@ -301,7 +322,8 @@ body {
 .tc-icon-btn--quiet,
 .tc-icon-btn--large,
 .tc-icon-btn--large--quiet,
-.tc-icon-btn-hdr {
+.tc-icon-btn-hdr,
+.tc-icon-btn-choice {
   position: relative;
   display: inline-block;
   padding: 0;
@@ -392,4 +414,16 @@ body {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
+}
+
+.tc-icon-btn-choice {
+  background-color: #3498db;
+  color: #ecf0f1;
+  padding: 5px;
+  line-height: 44px;
+}
+
+.eh-challenge .eh-clg-choices {
+  margin: 2px;
+  padding: 2px;
 }

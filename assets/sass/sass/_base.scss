@@ -7,6 +7,28 @@ body{
 	font-family: $font-family;
     font-weight: $body-font-weight;
 }
+
+.hide {
+  display: none;
+}
+
+.hide.active, .show {
+  display: block;
+}
+
+.fixed {
+  position: fixed;
+  &.pinned {
+    position: absolute;
+  }
+}
+
+.unfixed {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
 .content{
     background-color:$global-bg-color;
 }
@@ -246,7 +268,8 @@ body{
 .tc-icon-btn--quiet,
 .tc-icon-btn--large,
 .tc-icon-btn--large--quiet,
-.tc-icon-btn-hdr {
+.tc-icon-btn-hdr,
+.tc-icon-btn-choice {
   position: relative;
   display: inline-block;
   padding: 0;
@@ -329,4 +352,31 @@ body{
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
+}
+//Additional styles
+.tc-icon-btn-choice{
+  background-color:$primary-color;
+  color:$global-font-light;
+  padding:5px;
+  line-height:44px;
+}
+
+// Challenge styles
+.eh-challenge{
+  .eh-clg-choices{
+    margin:2px;
+    padding:2px;
+  }
+  .eh-clg-question{
+
+  }
+  .eh-clg-report{
+
+  }
+  .eh-clg-counter{
+
+  }
+  .eh-clg-rpt-options{
+
+  }
 }
