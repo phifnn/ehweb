@@ -403,7 +403,10 @@ body{
       display:table-cell;
       width:50%;
       padding-right:3px;
-    }
+      input[type="radio"]:checked + span{
+        background-color:$secondary-color;
+      }
+    }    
   }
   .eh-clg-question{
 
@@ -417,8 +420,4 @@ body{
   .eh-clg-rpt-options{
 
   }
-}
-
-.eh-clg-choices-radio:checked + span{
-    background-color:$secondary-color;
 }

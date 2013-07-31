@@ -478,7 +478,6 @@ body {
   width: 50%;
   padding-right: 3px;
 }
-
-.eh-clg-choices-radio:checked + span {
+.eh-challenge .eh-clg-choices div input[type="radio"]:checked + span {
   background-color: #1abc9c;
 }
