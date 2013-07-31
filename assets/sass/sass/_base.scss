@@ -125,6 +125,7 @@ body{
     }
     label{
         width:200%;
+        line-height:18px;
     }
 }
 #nav{
@@ -228,22 +229,23 @@ body{
 
  .is-disabled - Simulates a disabled state on mobile devices
 
-    <a class="topcoat-icon-button">
+    <a class="tc-icon-btn">
         <span class="topcoat-icon topcoat-icon--menu-stack"></span>
     </a>
 
-    <a class="topcoat-icon-button is-active">
+    <a class="tc-icon-btn is-active">
       <span class="topcoat-icon topcoat-icon--menu-stack"></span>
     </a>
 
-    <a class="topcoat-icon-button is-disabled">
+    <a class="tc-icon-btn is-disabled">
       <span class="topcoat-icon topcoat-icon--menu-stack"></span>
     </a>
 */
-.topcoat-icon-button,
-.topcoat-icon-button--quiet,
-.topcoat-icon-button--large,
-.topcoat-icon-button--large--quiet {
+.tc-icon-btn,
+.tc-icon-btn--quiet,
+.tc-icon-btn--large,
+.tc-icon-btn--large--quiet,
+.tc-icon-btn-hdr {
   position: relative;
   display: inline-block;
   padding: 0;
@@ -268,14 +270,14 @@ body{
   @include border-radius(0);
   @include text-shadow(none);
 }
-.topcoat-icon-button:active,
-.topcoat-icon-button.is-active {
+.tc-icon-btn:active,
+.tc-icon-btn.is-active {
   background-color: $secondary-color;
   //-webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
   //box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-icon-button:disabled,
-.topcoat-icon-button.is-disabled {
+.tc-icon-btn:disabled,
+.tc-icon-btn.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -292,28 +294,28 @@ body{
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-icon-button--quiet">
+    <a class="tc-icon-btn--quiet">
         <span class="topcoat-icon topcoat-icon--menu-stack"></span>
     </a>
 
-    <a class="topcoat-icon-button--quiet is-active">
+    <a class="tc-icon-btn--quiet is-active">
       <span class="topcoat-icon topcoat-icon--menu-stack"></span>
     </a>
 
-    <a class="topcoat-icon-button--quiet is-disabled">
+    <a class="tc-icon-btn--quiet is-disabled">
       <span class="topcoat-icon topcoat-icon--menu-stack"></span>
     </a>
 */
-.topcoat-icon-button--quiet {
+.tc-icon-btn--quiet {
   background: transparent;
   //border: 1px solid transparent;
   //-webkit-box-shadow: none;
   //box-shadow: none;
 }
-.topcoat-icon-button--quiet:active,
-.topcoat-icon-button--quiet.is-active,
-.topcoat-icon-button--large--quiet:active,
-.topcoat-icon-button--large--quiet.is-active {
+.tc-icon-btn--quiet:active,
+.tc-icon-btn--quiet.is-active,
+.tc-icon-btn--large--quiet:active,
+.tc-icon-btn--large--quiet.is-active {
   color: #454545;
   text-shadow: 0 1px #fff;
   background-color: #d3d7d7;
@@ -321,8 +323,8 @@ body{
   -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-icon-button--quiet:disabled,
-.topcoat-icon-button--quiet.is-disabled {
+.tc-icon-btn--quiet:disabled,
+.tc-icon-btn--quiet.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
