@@ -20,6 +20,15 @@ app.routers.AppRouter = Backbone.Router.extend({
        // if (!app.homeView) {
             app.homeView = new app.views.HomeView();
             $('#main-container').html(app.homeView.render().el);
+            var bullets = document.getElementById('position').getElementsByTagName('li');
+            window.mySwipe = Swipe(document.getElementById('slider'),{auto:2500,callback: function(index, elem) {   
+                    var i = bullets.length;
+                    while (i--) {
+                      bullets[i].className = 'icon-circle-blank';
+                    }
+                    bullets[index].className += ' icon-circle';
+                  }
+              });//Start the slider.
         /*} else {
             console.log('reusing home view');
             app.homeView.delegateEvents(); // delegate events when the view is recycled
