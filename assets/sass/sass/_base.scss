@@ -124,8 +124,9 @@ body{
         text-align:center;        
     }
     label{
-        width:200%;
-        line-height:18px;
+        color: $primary-color;
+        padding: 0px 5px;
+        display:inline-block;
     }
 }
 #nav{

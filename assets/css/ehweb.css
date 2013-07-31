@@ -151,8 +151,9 @@ body {
   text-align: center;
 }
 #header label {
-  width: 200%;
-  line-height: 18px;
+  color: #3498db;
+  padding: 0px 5px;
+  display: inline-block;
 }
 
 #nav {
