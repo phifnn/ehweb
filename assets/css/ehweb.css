@@ -478,3 +478,18 @@ body {
 .eh-challenge .eh-clg-choices input[type="radio"]:checked + span {
   background-color: #1abc9c;
 }
+
+#eh-set-cat-sel-list i {
+  opacity: 0;
+  font-size: 18px;
+  color: #1abc9c;
+  -webkit-transition: opacity 0 linear;
+  -webkit-transition-delay: 0;
+  -moz-transition: opacity 0 linear 0;
+  -o-transition: opacity 0 linear 0;
+  transition: opacity 0 linear 0;
+}
+
+#eh-set-cat-sel-list input[type="checkbox"]:checked + i {
+  opacity: 1;
+}

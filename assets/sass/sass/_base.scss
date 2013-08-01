@@ -422,3 +422,14 @@ body{
 
   }
 }
+
+//Settings category selections
+#eh-set-cat-sel-list i{
+    opacity:0;
+    font-size:18px;
+    color:$secondary-color;
+    @include single-transition(opacity,0,linear,0);  
+}
+#eh-set-cat-sel-list input[type="checkbox"]:checked + i{
+    opacity:1;
+}
