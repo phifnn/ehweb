@@ -386,10 +386,10 @@ body{
 .tc-icon-btn-choice{
   background-color:$primary-color;
   color:$global-font-light;
-  padding:5px;
+  //padding:5px;
   line-height:48px;
   text-align:center;
-  @include single-transition(background-color,0.25s,linear,0);
+  @include single-transition(background-color,0,linear,0);
 }
 
 // Challenge styles
@@ -403,7 +403,6 @@ body{
       display:table-cell;
       width:50%;
       padding-right:3px;
-      //cursor: pointer;//iOS specific issue fix.
     }
     input[type="radio"]:checked + span{
         background-color:$secondary-color;

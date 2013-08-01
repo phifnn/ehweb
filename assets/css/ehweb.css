@@ -455,14 +455,13 @@ body {
 .tc-icon-btn-choice {
   background-color: #3498db;
   color: #ecf0f1;
-  padding: 5px;
   line-height: 48px;
   text-align: center;
-  -webkit-transition: background-color 0.25s linear;
+  -webkit-transition: background-color 0 linear;
   -webkit-transition-delay: 0;
-  -moz-transition: background-color 0.25s linear 0;
-  -o-transition: background-color 0.25s linear 0;
-  transition: background-color 0.25s linear 0;
+  -moz-transition: background-color 0 linear 0;
+  -o-transition: background-color 0 linear 0;
+  transition: background-color 0 linear 0;
 }
 
 .eh-challenge .eh-clg-choices {
