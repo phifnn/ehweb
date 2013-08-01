@@ -465,22 +465,17 @@ body {
   transition: background-color 0.25s linear 0;
 }
 
-.eh-challenge {
-  display: inline-block;
-}
 .eh-challenge .eh-clg-choices {
   margin: 2px;
   display: table;
   width: 100%;
 }
-.eh-challenge .eh-clg-choices div {
+.eh-challenge .eh-clg-choices label {
   display: table-cell;
   width: 50%;
   padding-right: 3px;
+  cursor: pointer;
 }
 .eh-challenge .eh-clg-choices input[type="radio"]:checked + span {
   background-color: #1abc9c;
-}
-.eh-challenge .eh-clg-choices label {
-  cursor: pointer;
 }

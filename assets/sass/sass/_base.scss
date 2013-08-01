@@ -394,21 +394,19 @@ body{
 
 // Challenge styles
 .eh-challenge{
-  display:inline-block;
+  //display:inline-block;
   .eh-clg-choices{
     margin:2px;
     display:table;
     width:100%;
-    div{
+    label{
       display:table-cell;
       width:50%;
       padding-right:3px;
+      cursor: pointer;//iOS specific issue fix.
     }
     input[type="radio"]:checked + span{
         background-color:$secondary-color;
-    }
-    label{
-      cursor: pointer;
     }    
   }
   .eh-clg-question{
