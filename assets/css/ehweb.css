@@ -458,7 +458,6 @@ body {
   padding: 5px;
   line-height: 48px;
   text-align: center;
-  cursor: pointer;
   -webkit-transition: background-color 0.25s linear;
   -webkit-transition-delay: 0;
   -moz-transition: background-color 0.25s linear 0;
@@ -479,6 +478,9 @@ body {
   width: 50%;
   padding-right: 3px;
 }
-.eh-challenge .eh-clg-choices div input[type="radio"]:checked + span {
+.eh-challenge .eh-clg-choices input[type="radio"]:checked + span {
   background-color: #1abc9c;
+}
+.eh-challenge .eh-clg-choices label {
+  cursor: pointer;
 }
