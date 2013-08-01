@@ -479,9 +479,18 @@ body {
   background-color: #1abc9c;
 }
 
+#eh-set-cat-sel-list li {
+  padding: 0px;
+}
+
+#eh-set-cat-sel-list label {
+  display: inline-block;
+  padding: 20px 60px 20px 10px;
+  width: 80%;
+}
+
 #eh-set-cat-sel-list i {
   opacity: 0;
-  font-size: 18px;
   color: #1abc9c;
   -webkit-transition: opacity 0 linear;
   -webkit-transition-delay: 0;

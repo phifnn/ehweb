@@ -422,11 +422,17 @@ body{
 
   }
 }
-
 //Settings category selections
+#eh-set-cat-sel-list li{
+  padding:0px;
+}
+#eh-set-cat-sel-list label{
+  display:inline-block;
+  padding: 20px 60px 20px 10px;
+  width:80%;
+}
 #eh-set-cat-sel-list i{
-    opacity:0;
-    font-size:18px;
+    opacity:0;    
     color:$secondary-color;
     @include single-transition(opacity,0,linear,0);  
 }
