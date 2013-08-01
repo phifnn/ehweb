@@ -425,7 +425,7 @@ body{
   }
   .eh-clg-cnter{
     position:absolute;
-    right:0px;
+    right:40px;
     bottom:0px;
     padding-top:2px;
     padding-left:2px;
@@ -437,6 +437,8 @@ body{
       font-size:20px;
       color:$warning-color;
       text-align:center;
+      width:100%;
+      display:inline-block;
     }
   }
   .eh-clg-rpt-options{

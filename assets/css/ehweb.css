@@ -493,7 +493,7 @@ body {
 }
 .eh-challenge .eh-clg-cnter {
   position: absolute;
-  right: 0px;
+  right: 40px;
   bottom: 0px;
   padding-top: 2px;
   padding-left: 2px;
@@ -506,6 +506,8 @@ body {
   font-size: 20px;
   color: #e67e22;
   text-align: center;
+  width: 100%;
+  display: inline-block;
 }
 
 #eh-set-cat-sel-list li {
