@@ -403,7 +403,7 @@ body{
       display:table-cell;
       width:50%;
       padding-right:3px;
-      cursor: pointer;//iOS specific issue fix.
+      //cursor: pointer;//iOS specific issue fix.
     }
     input[type="radio"]:checked + span{
         background-color:$secondary-color;
