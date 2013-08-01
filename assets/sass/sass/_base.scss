@@ -395,6 +395,7 @@ body{
 // Challenge styles
 .eh-challenge{
   //display:inline-block;
+  position:relative;
   .eh-clg-choices{
     margin:2px;
     display:table;
@@ -412,10 +413,31 @@ body{
 
   }
   .eh-clg-report{
-
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    padding-top:2px;
+    padding-right:2px;
+    background-color:$danger-color;
+    color:$global-font-light;
+    width:52px;
+    height:52px;
   }
-  .eh-clg-counter{
-
+  .eh-clg-cnter{
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    padding-top:2px;
+    padding-left:2px;
+    background-color:$global-font-light;
+    color:$global-font-dark;
+    width:52px;
+    height:52px;
+    .cnt-text{
+      font-size:20px;
+      color:$warning-color;
+      text-align:center;
+    }
   }
   .eh-clg-rpt-options{
 
