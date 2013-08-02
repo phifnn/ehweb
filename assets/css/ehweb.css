@@ -535,11 +535,11 @@ body {
 }
 
 #eh-stats-wheel {
-  width: 200px;
-  height: 200px;
-  border-radius: 200px;
-  border-top: 50px solid #e74c3c;
+  width: 80px;
+  height: 80px;
+  border-top: 50px solid #ccc;
   border-bottom: 50px solid #27ae60;
   border-left: 50px solid #e74c3c;
   border-right: 50px solid #27ae60;
+  border-radius: 100px;
 }
