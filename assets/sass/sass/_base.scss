@@ -396,10 +396,10 @@ body{
 .tc-icon-btn-choice{
   background-color:$primary-color;
   color:$global-font-light;
-  //padding:5px;
-  line-height:inherit;
+  line-height:24px;
   text-align:center;
   white-space: normal;
+  height:100%;
   @include single-transition(background-color,0,linear,0);
 }
 
@@ -416,9 +416,10 @@ body{
       display:table-cell;
       width:50%;
       padding-right:2px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      //padding-top: 10px;
+      //padding-bottom: 10px;
       vertical-align:top;
+      height:70px;
     }
     input[type="radio"]:checked + span{
         background-color:$secondary-color;
