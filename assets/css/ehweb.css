@@ -5,7 +5,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 body {
-  background-color: #ecf0f1;
+  background-color: white;
   font-family: "Open Sans";
   font-weight: 400;
 }
@@ -68,7 +68,7 @@ body {
 }
 
 .content {
-  background-color: #ecf0f1;
+  background-color: white;
 }
 
 .flatten-input {
@@ -83,7 +83,7 @@ body {
 .bar-title {
   font-family: "Open Sans";
   font-weight: 300;
-  background-color: #34495e;
+  background-color: #21698f;
   border: none;
   background-image: none;
   box-shadow: none;
@@ -122,16 +122,16 @@ body {
 }
 
 .button-positive {
-  background-color: #3498db;
-  color: #ecf0f1;
+  background-color: #41a2d4;
+  color: white;
 }
 .button-positive:active {
-  background-color: #124364;
+  background-color: #174b65;
 }
 
 .button-negative {
-  background-color: #e67e22;
-  color: #ecf0f1;
+  background-color: #ffa800;
+  color: white;
 }
 .button-negative:active {
   background-color: #a5a5a5;
@@ -139,7 +139,7 @@ body {
 
 .button-green {
   background-color: #1abc9c;
-  color: #ecf0f1;
+  color: white;
 }
 .button-green:active {
   background-color: #a5a5a5;
@@ -147,7 +147,7 @@ body {
 
 .button-info {
   background-color: #bdc3c7;
-  color: #ecf0f1;
+  color: white;
 }
 .button-info:active {
   background-color: #a5a5a5;
@@ -155,7 +155,7 @@ body {
 
 .button-navbar {
   background-color: #202525;
-  color: #ecf0f1;
+  color: white;
 }
 .button-navbar:active {
   background-color: black;
@@ -167,8 +167,8 @@ body {
   box-shadow: none;
   text-shadow: none;
   border-radius: 0px;
-  background-color: #34495e;
-  color: #ecf0f1;
+  background-color: #21698f;
+  color: white;
   font-size: 18px;
 }
 
@@ -183,34 +183,34 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 44px;
   z-index: 2;
-  background: #34495e;
-  color: #ecf0f1;
-  padding: 5px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: box;
+  background: #21698f;
+  color: white;
   border: none;
   background-image: none;
   box-shadow: none;
   text-shadow: none;
   border-radius: 0px;
+  display: table;
 }
 #header .title {
   font-family: "Open Sans";
   font-weight: 300;
-  width: 100%;
+  width: 70%;
   text-align: center;
+  display: table-cell;
+  padding: 12px;
 }
 #header label {
-  color: #3498db;
-  padding: 0px 5px;
-  display: inline-block;
+  color: #41a2d4;
+  display: table-cell;
+  width: 15%;
+  padding: 12px;
+}
+#header div {
+  width: 15%;
+  display: table-cell;
+  padding: 12px;
 }
 
 #nav {
@@ -222,7 +222,7 @@ body {
   z-index: 1;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: #ecf0f1;
+  background-color: white;
   -webkit-transition: opacity 0.25s ease-in-out;
   -webkit-transition-delay: 0;
   -moz-transition: opacity 0.25s ease-in-out 0;
@@ -254,7 +254,7 @@ body {
   position: relative;
   min-height: 400px;
   z-index: 5;
-  background-color: #ecf0f1;
+  background-color: white;
   -webkit-transform: translate3D(0, 0, 0);
   -moz-transform: translate3D(0, 0, 0);
   -ms-transform: translate3D(0, 0, 0);
@@ -295,7 +295,7 @@ body {
 #remember-me-tick {
   opacity: 0;
   font-size: 18px;
-  color: #3498db;
+  color: #41a2d4;
   -webkit-transition: opacity 0.25s linear;
   -webkit-transition-delay: 0;
   -moz-transition: opacity 0.25s linear 0;
@@ -309,7 +309,7 @@ body {
 
 .check-label {
   display: inline-block;
-  color: #3498db;
+  color: #41a2d4;
   padding: 10px;
 }
 
@@ -373,9 +373,9 @@ body {
   overflow: hidden;
   line-height: 40px;
   letter-spacing: 1px;
-  color: #3498db;
+  color: #41a2d4;
   vertical-align: baseline;
-  background-color: #34495e;
+  background-color: #21698f;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -453,9 +453,9 @@ body {
 }
 
 .tc-icon-btn-choice {
-  background-color: #3498db;
-  color: #ecf0f1;
-  line-height: 48px;
+  background-color: #41a2d4;
+  color: white;
+  line-height: 50px;
   text-align: center;
   -webkit-transition: background-color 0 linear;
   -webkit-transition-delay: 0;
@@ -468,14 +468,16 @@ body {
   position: relative;
 }
 .eh-challenge .eh-clg-choices {
-  margin: 2px;
+  border: 2px solid #fff;
   display: table;
   width: 100%;
 }
 .eh-challenge .eh-clg-choices label {
   display: table-cell;
   width: 50%;
-  padding-right: 3px;
+  padding-right: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .eh-challenge .eh-clg-choices input[type="radio"]:checked + span {
   background-color: #1abc9c;
@@ -486,8 +488,8 @@ body {
   bottom: 0px;
   padding-top: 2px;
   padding-right: 2px;
-  background-color: #e74c3c;
-  color: #ecf0f1;
+  background-color: #e53237;
+  color: white;
   width: 52px;
   height: 52px;
 }
@@ -497,17 +499,16 @@ body {
   bottom: 0px;
   padding-top: 2px;
   padding-left: 2px;
-  background-color: #ecf0f1;
+  background-color: white;
   color: #34495e;
   width: 52px;
   height: 52px;
+  display: table-cell;
+  text-align: center;
 }
 .eh-challenge .eh-clg-cnter .cnt-text {
   font-size: 20px;
-  color: #e67e22;
-  text-align: center;
-  width: 100%;
-  display: inline-block;
+  color: #ffa800;
 }
 
 #eh-set-cat-sel-list li {
