@@ -173,18 +173,21 @@ body{
         width:70%;
         text-align:center;
         display:table-cell;  
-        padding: 12px;      
+        padding: 12px;   
+        vertical-align:top;   
     }
     label{
         color: $primary-color;        
         display:table-cell;
         width:15%;
         padding: 12px;
+        vertical-align:top;
     }
     div{
       width:15%;
       display:table-cell;
       padding: 12px;
+      vertical-align:top;
     }
 }
 #nav{
@@ -419,12 +422,12 @@ body{
     }    
   }
   .eh-clg-question{
-
+    padding:2px;
   }
   .eh-clg-report{
     position:absolute;
-    left:0px;
-    bottom:0px;
+    left:4px;
+    bottom:4px;
     padding-top:2px;
     padding-right:2px;
     background-color:$danger-color;
@@ -434,8 +437,8 @@ body{
   }
   .eh-clg-cnter{
     position:absolute;
-    right:40px;
-    bottom:0px;
+    right:28px;
+    bottom:4px;
     padding-top:2px;
     padding-left:2px;
     background-color:$global-font-light;

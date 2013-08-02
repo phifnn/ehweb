@@ -200,17 +200,20 @@ body {
   text-align: center;
   display: table-cell;
   padding: 12px;
+  vertical-align: top;
 }
 #header label {
   color: #41a2d4;
   display: table-cell;
   width: 15%;
   padding: 12px;
+  vertical-align: top;
 }
 #header div {
   width: 15%;
   display: table-cell;
   padding: 12px;
+  vertical-align: top;
 }
 
 #nav {
@@ -482,10 +485,13 @@ body {
 .eh-challenge .eh-clg-choices input[type="radio"]:checked + span {
   background-color: #1abc9c;
 }
+.eh-challenge .eh-clg-question {
+  padding: 2px;
+}
 .eh-challenge .eh-clg-report {
   position: absolute;
-  left: 0px;
-  bottom: 0px;
+  left: 4px;
+  bottom: 4px;
   padding-top: 2px;
   padding-right: 2px;
   background-color: #e53237;
@@ -495,8 +501,8 @@ body {
 }
 .eh-challenge .eh-clg-cnter {
   position: absolute;
-  right: 40px;
-  bottom: 0px;
+  right: 28px;
+  bottom: 4px;
   padding-top: 2px;
   padding-left: 2px;
   background-color: white;
