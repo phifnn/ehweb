@@ -462,3 +462,17 @@ body{
 #eh-set-cat-sel-list input[type="checkbox"]:checked + i{
     opacity:1;
 }
+
+//Stats styles
+#eh-stats-wheel{
+   width: 200px;
+   height: 200px;
+   //border: 10px dotted #E5E5E5;
+   border-radius: 200px;   
+
+    border-top: 50px solid #e74c3c;
+    border-bottom: 50px solid #27ae60;
+    border-left: 50px solid #e74c3c;
+    border-right: 50px solid #27ae60;
+
+}
