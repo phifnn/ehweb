@@ -332,6 +332,9 @@ body {
   width: 100%;
   position: relative;
 }
+.swipe-wrap > div img {
+  max-width: 300px;
+}
 
 /*
  Icon Button

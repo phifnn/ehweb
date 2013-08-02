@@ -277,6 +277,9 @@ body{
   float:left;
   width:100%;
   position: relative;
+  img{
+    max-width:300px;
+  }
 }
 //Icon quiet buttons from topcoat io.
 /*
