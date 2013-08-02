@@ -399,6 +399,7 @@ body{
   //padding:5px;
   line-height:50px;
   text-align:center;
+  white-space: normal;
   @include single-transition(background-color,0,linear,0);
 }
 
@@ -410,6 +411,7 @@ body{
     border:2px solid #fff;
     display:table;
     width:100%;
+    table-layout:fixed;
     label{
       display:table-cell;
       width:50%;

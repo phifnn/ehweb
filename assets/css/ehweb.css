@@ -460,6 +460,7 @@ body {
   color: white;
   line-height: 50px;
   text-align: center;
+  white-space: normal;
   -webkit-transition: background-color 0 linear;
   -webkit-transition-delay: 0;
   -moz-transition: background-color 0 linear 0;
@@ -474,6 +475,7 @@ body {
   border: 2px solid #fff;
   display: table;
   width: 100%;
+  table-layout: fixed;
 }
 .eh-challenge .eh-clg-choices label {
   display: table-cell;
