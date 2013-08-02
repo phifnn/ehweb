@@ -458,7 +458,7 @@ body {
 .tc-icon-btn-choice {
   background-color: #41a2d4;
   color: white;
-  line-height: 50px;
+  line-height: inherit;
   text-align: center;
   white-space: normal;
   -webkit-transition: background-color 0 linear;
@@ -483,6 +483,7 @@ body {
   padding-right: 2px;
   padding-top: 10px;
   padding-bottom: 10px;
+  vertical-align: top;
 }
 .eh-challenge .eh-clg-choices input[type="radio"]:checked + span {
   background-color: #1abc9c;
