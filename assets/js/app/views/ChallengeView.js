@@ -24,9 +24,9 @@ app.views.ChallengeView = Backbone.View.extend({
     choiceSelection: function (event) {
         //var key = $('.search-key').val();
         //this.searchResults.fetch({reset: true, data: {name: key}});
-        $(event.currentTarget).prop('checked', true)
+        event.currentTarget.checked=true;
         //var s = $(event.currentTarget).val();
-        //console.log(s);
+        console.log(event.currentTarget.value);
         window.mySlider.next();
     }/*,
 
