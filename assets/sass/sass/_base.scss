@@ -281,6 +281,11 @@ body{
     max-width:300px;
   }
 }
+.swipe-wrap > li {
+  float:left;
+  width:100%;
+  position: relative;
+}
 //Icon quiet buttons from topcoat io.
 /*
  Icon Button

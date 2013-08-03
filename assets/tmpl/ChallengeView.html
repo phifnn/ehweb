@@ -16,8 +16,8 @@
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div id="content-container">
 <div class="content">
-    <!--<div class="slider">-->
-        <ul>
+    <div class="swipe" id="eh-clg-slider">
+        <ul class="swipe-wrap">
           <% _.each(data, function(challenge) { %> 
             <li class="eh-challenge">
                 
@@ -31,7 +31,7 @@
             </li>
           <% }); %>
   </ul>
-<!--</div>-->
+</div>
 </div>
 </div>
 </div>

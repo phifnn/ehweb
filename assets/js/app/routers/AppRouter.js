@@ -59,6 +59,7 @@ app.routers.AppRouter = Backbone.Router.extend({
                 // instead of creating new instances
                 //app.slider.slidePage(new app.views.EmployeeView({model: data}).render().$el);
                 $('#main-container').html(new app.views.ChallengeView({model:data}).render().el);
+                window.mySlider = Swipe(document.getElementById('eh-clg-slider'));//Start the slider.
             }
         });
     },
