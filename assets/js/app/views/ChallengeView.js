@@ -17,13 +17,14 @@ app.views.ChallengeView = Backbone.View.extend({
     },
 
     events: {
-        "click span.tc-icon-btn-choice":    "choiceSelection",
+        "click input.eh-clg-radio":    "choiceSelection",
         //"keypress .search-key": "onkeypress"
     },
 
     choiceSelection: function (event) {
         //var key = $('.search-key').val();
         //this.searchResults.fetch({reset: true, data: {name: key}});
+        $(this).attr('checked', true)
         window.mySlider.next();
     }/*,
 
