@@ -17,7 +17,7 @@ app.views.ChallengeView = Backbone.View.extend({
     },
 
     events: {
-        "click input.eh-clg-radio":    "choiceSelection",
+        "change input.eh-clg-radio":    "choiceSelection",
         //"keypress .search-key": "onkeypress"
     },
 
