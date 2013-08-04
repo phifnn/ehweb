@@ -26,8 +26,10 @@ app.views.ChallengeView = Backbone.View.extend({
         //this.searchResults.fetch({reset: true, data: {name: key}});
         event.currentTarget.checked=true;
         //var s = $(event.currentTarget).val();
-        console.log(event.currentTarget.value);
-        window.mySlider.next();
+        //console.log(event.currentTarget.value);
+        alert(event.currentTarget.value);
+        alert(event.currentTarget.checked);
+        //window.mySlider.next();
     }/*,
 
     onkeypress: function (event) {
