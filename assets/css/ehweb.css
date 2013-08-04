@@ -14,6 +14,10 @@ body {
   display: none;
 }
 
+.hidev {
+  visibility: hidden;
+}
+
 .hide.active, .show {
   display: block;
 }
