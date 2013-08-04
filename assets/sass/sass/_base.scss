@@ -432,6 +432,7 @@ body{
       //padding-bottom: 10px;
       vertical-align:top;
       height:70px;
+      cursor:pointer;
     }
     input[type="radio"]:checked + span{
         background-color:$secondary-color;
