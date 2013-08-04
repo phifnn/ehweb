@@ -27,8 +27,8 @@ app.views.ChallengeView = Backbone.View.extend({
         event.currentTarget.checked=true;
         //var s = $(event.currentTarget).val();
         //console.log(event.currentTarget.value);
-        alert(event.currentTarget.value);
-        alert(event.currentTarget.checked);
+        //alert(event.currentTarget.value);
+        //alert(event.currentTarget.checked);
         //window.mySlider.next();
     }/*,
 
