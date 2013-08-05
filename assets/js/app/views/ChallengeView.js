@@ -26,7 +26,7 @@ app.views.ChallengeView = Backbone.View.extend({
         //var s = $(event.currentTarget).val();
         //console.log(event.currentTarget.value);
         var id = $(event.currentTarget).attr('for');
-        $('#'+id).trigger('change');
+        $('#'+id).prop('checked',true);
         //alert(event.target.value);
         //alert(event.currentTarget.value);
         //alert(event.currentTarget.checked);
