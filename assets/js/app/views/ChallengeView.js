@@ -17,18 +17,18 @@ app.views.ChallengeView = Backbone.View.extend({
     },
 
     events: {
-        "change input.eh-clg-radio":    "choiceSelection",
+        "click label.eh-clg-radio":    "choiceSelection",
         //"keypress .search-key": "onkeypress"
     },
 
     choiceSelection: function (event) {
-        //var key = $('.search-key').val();
-        //this.searchResults.fetch({reset: true, data: {name: key}});
-        event.currentTarget.checked=true;
+        //event.currentTarget.checked=true;
         //var s = $(event.currentTarget).val();
         //console.log(event.currentTarget.value);
-        alert(event.target.value);
-        alert(event.currentTarget.value);
+        var id = $(event.currentTarget).attr('for');
+        $('#'+id).trigger('change');
+        //alert(event.target.value);
+        //alert(event.currentTarget.value);
         //alert(event.currentTarget.checked);
         //window.mySlider.next();
     }/*,
