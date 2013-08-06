@@ -75,6 +75,10 @@ body {
   background-color: white;
 }
 
+.eh-bg {
+  background-image: url('/assets/img/bgLight.png');
+}
+
 .flatten-input {
   border-radius: 0px;
   box-shadow: none;
@@ -158,8 +162,9 @@ body {
 }
 
 .button-navbar {
-  background-color: #202525;
+  background: transparent;
   color: white;
+  border-bottom: 3px groove #787878;
 }
 .button-navbar:active {
   background-color: black;
@@ -229,7 +234,7 @@ body {
   z-index: 1;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: white;
+  background-image: url('/assets/img/bgDark.png');
   -webkit-transition: opacity 0.25s ease-in-out;
   -webkit-transition-delay: 0;
   -moz-transition: opacity 0.25s ease-in-out 0;

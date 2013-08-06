@@ -20,7 +20,7 @@ app.views.LoginView = Backbone.View.extend({
         //var key = $('.search-key').val();
         //this.searchResults.fetch({reset: true, data: {name: key}});
         app.router.navigate("challenge", {trigger: true});
-    },
+    }//,
 /*
     onkeypress: function (event) {
         if (event.keyCode === 13) { // enter key pressed

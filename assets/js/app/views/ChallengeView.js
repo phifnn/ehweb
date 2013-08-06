@@ -1,17 +1,13 @@
 app.views.ChallengeView = Backbone.View.extend({
-/*
     initialize: function () {
-        this.challengeList = new app.models.ChallengeCollection();
-        this.challengeList.fetch({
-            success: function (data) {
-                //$('#main-section').html(new app.views.ChallengeView({model:data}).render().el);
-                render();
-            }
-            });
-    },*/
+        this.listenTo(this.collection, 'reset', this.refreshData);
+        //this.collection.on('change',this.refreshData,this);
+        this.collection.fetch({reset: true});
+    },
 
     render: function () {
-        this.$el.html(this.template({data:this.model.toJSON()}));
+        this.$el.html(this.template({data:this.collection.toJSON()}));
+        
        // $('.content', this.el).append(this.searchresultsView.render().el);
         return this;
     },
@@ -31,6 +27,12 @@ app.views.ChallengeView = Backbone.View.extend({
         //alert(event.currentTarget.value);
         //alert(event.currentTarget.checked);
         //window.mySlider.next();
+    },
+
+    refreshData: function(){
+        //console.log(this.collection.toJSON());
+        $('#main-container').html(this.render().el);
+        app.challengeSlider = Swipe(document.getElementById('eh-clg-slider'));//Start the slider.
     }/*,
 
     onkeypress: function (event) {

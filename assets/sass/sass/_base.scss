@@ -66,6 +66,10 @@ body{
     background-color:$global-bg-color;
 }
 
+.eh-bg{
+  background-image:image-url('bgLight.png', false, false);
+}
+
 .flatten-input{
     border-radius:0px;
     box-shadow:none;
@@ -140,8 +144,10 @@ body{
     
 }
 .button-navbar{
-    background-color:$slide-nav-bar-color;
+    //background-color:$slide-nav-bar-color;
+    background:transparent;
     color:$global-font-light;
+    border-bottom: 3px groove #787878;
     &:active{
         background-color:darken($slide-nav-bar-color,30%);
     }   
@@ -203,7 +209,8 @@ body{
     z-index: 1;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    background-color:$global-bg-color;
+    //background-color:$global-bg-color;
+    background-image:image-url('bgDark.png', false, false);
     @include single-transition(opacity,0.25s,ease-in-out,0);
 }
 #nav-handler:checked ~ #nav {
