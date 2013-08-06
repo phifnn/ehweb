@@ -76,7 +76,7 @@ body {
 }
 
 .eh-bg {
-  background-image: url("assets/img/bgLight.png");
+  background-image: url("../img/bgLight.png");
 }
 
 .flatten-input {
@@ -235,7 +235,7 @@ body {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   background-color: white;
-  background-image: url("assets/img/bgDark.png");
+  background-image: url("../img/bgDark.png");
   -webkit-transition: opacity 0.25s ease-in-out;
   -webkit-transition-delay: 0;
   -moz-transition: opacity 0.25s ease-in-out 0;

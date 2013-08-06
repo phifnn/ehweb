@@ -68,7 +68,7 @@ body{
 
 .eh-bg{
   //background-image:image-url('bgLight.png', false, false);
-  background-image:url('assets/img/bgLight.png');
+  background-image:url('../img/bgLight.png');
   //background-color:#fff;
 }
 
@@ -212,7 +212,7 @@ body{
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     background-color:$global-bg-color;
-    background-image:url('assets/img/bgDark.png');
+    background-image:url('../img/bgDark.png');
     @include single-transition(opacity,0.25s,ease-in-out,0);
 }
 #nav-handler:checked ~ #nav {
