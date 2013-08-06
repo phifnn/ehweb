@@ -6,7 +6,7 @@ require 'modular-scale'
 http_path = "/"
 css_dir = "../css"
 sass_dir = "sass"
-images_dir = ""
+images_path = "assets/img"
 javascripts_dir = "javascripts"
 
 # You can select your preferred output style here (can be overridden via the command line):
