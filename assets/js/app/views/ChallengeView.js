@@ -32,7 +32,7 @@ app.views.ChallengeView = Backbone.View.extend({
     refreshData: function(){
         //console.log(this.collection.toJSON());
         $('#main-container').html(this.render().el);
-        app.challengeSlider = Swipe(document.getElementById('eh-clg-slider'));//Start the slider.
+        app.challengeSlider = Swipe(document.getElementById('eh-clg-slider'),{continuous:false});//Start the slider.
     }/*,
 
     onkeypress: function (event) {
