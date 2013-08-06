@@ -67,7 +67,8 @@ body{
 }
 
 .eh-bg{
-  background-image:image-url('bgLight.png', false, false);
+  background-image:image-url('assets/img/bgLight.png', false, false);
+  //background-color:#fff;
 }
 
 .flatten-input{
@@ -210,7 +211,7 @@ body{
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     //background-color:$global-bg-color;
-    background-image:image-url('bgDark.png', false, false);
+    background-image:image-url('assets/img/bgDark.png', false, false);
     @include single-transition(opacity,0.25s,ease-in-out,0);
 }
 #nav-handler:checked ~ #nav {
