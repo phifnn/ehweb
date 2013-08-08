@@ -27,6 +27,7 @@ app.views.ChallengeListView = Backbone.View.extend({
         this.collection.viewIndex++;
         if(this.collection.viewIndex >= this.collection.length){
             //show the score orientation page.(first time user)
+            this.showChallengeEnd();
 
         }else{
             this.refreshData(true);
@@ -37,6 +38,13 @@ app.views.ChallengeListView = Backbone.View.extend({
         //alert(event.currentTarget.value);
         //alert(event.currentTarget.checked);
         //window.mySlider.next();
+    },
+
+    showChallengeEnd: function(){
+        var newSlide = new app.views.ChallengeEndView({el:document.getElementById('eh-clg-slider-list')});
+        newSlide.render();
+        this.$('div.eh-clg-report').hide();
+        this.$('div.eh-clg-cnter').hide();
     },
 
     refreshData: function(advNext){
@@ -77,13 +85,23 @@ this.carousel = new Swipe(this.el.getElementsByClassName('swipe')[0], {
 app.views.ChallengeView = Backbone.View.extend({
     render: function () {
         //this.$el.html(this.template({data:this.collection.toJSON()}));
-        var template = _.template($('#chlg-template').html(),{challenge:this.model.toJSON(),anscount:this.options.answerCount});
+        var template = _.template($('#chlg-template').html(),{challenge:this.model.toJSON()});
         this.$el.append(template);
         app.challengeSlider.setup();
        // $('.content', this.el).append(this.searchresultsView.render().el);
         if(this.options.advanceToNext){
             app.challengeSlider.next();
         }
+        return this;
+    }
+});
+app.views.ChallengeEndView = Backbone.View.extend({
+    render: function () {
+        //this.$el.html(this.template({data:this.collection.toJSON()}));
+        var template = _.template($('#chlg-end-template').html());
+        this.$el.append(template);
+        app.challengeSlider.setup();
+        app.challengeSlider.next();
         return this;
     }
 });
