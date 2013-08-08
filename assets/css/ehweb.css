@@ -516,7 +516,8 @@ body {
   max-height: 100%;
   max-width: 100%;
 }
-.eh-challenge .eh-clg-report {
+
+.eh-clg-report {
   position: absolute;
   left: 4px;
   bottom: 4px;
@@ -527,7 +528,8 @@ body {
   width: 52px;
   height: 52px;
 }
-.eh-challenge .eh-clg-cnter {
+
+.eh-clg-cnter {
   position: absolute;
   right: 28px;
   bottom: 4px;
@@ -540,7 +542,7 @@ body {
   display: table-cell;
   text-align: center;
 }
-.eh-challenge .eh-clg-cnter .cnt-text {
+.eh-clg-cnter .cnt-text {
   font-size: 20px;
   color: #ffa800;
 }

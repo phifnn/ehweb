@@ -30,6 +30,7 @@ app.views.ChallengeListView = Backbone.View.extend({
 
         }else{
             this.refreshData(true);
+            this.$('p.cnt-text').html(this.collection.viewIndex);
         }
         
         //alert(event.target.value);
@@ -42,7 +43,7 @@ app.views.ChallengeListView = Backbone.View.extend({
         var index = this.collection.viewIndex;
         var challenge = this.collection.at(index);
         var newSlide = new app.views.ChallengeView({model:challenge,el:document.getElementById('eh-clg-slider-list'),
-                                                    advanceToNext:advNext,answerCount:index});
+                                                    advanceToNext:advNext});
         newSlide.render();
 
         //console.log(this.collection.toJSON());
