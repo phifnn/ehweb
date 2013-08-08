@@ -53,12 +53,18 @@ app.routers.AppRouter = Backbone.Router.extend({
     challenge: function () {
         // Since the challenge view never changes, we instantiate it and render it only once
         if (!app.challengeView) {
-            app.challengeView = new app.views.ChallengeListView({collection:new app.models.ChallengeCollection()});
-            $('#main-container').html(app.challengeView.render().el);
-            app.challengeSlider = Swipe(document.getElementById('eh-clg-slider'),{continuous:false});            
+            app.challengeView = new app.views.ChallengeListView({collection:new app.models.ChallengeCollection(),
+                                                                 el:document.getElementById('main-container')});
+            //$('#main-container').html(app.challengeView.render().el);
+            //app.challengeSlider = Swipe(document.getElementById('eh-clg-slider'),{continuous:false});
+        
+                        
         } else {
-            app.challengeView.refreshData();
             app.challengeView.delegateEvents(); // delegate events when the view is recycled
+            app.challengeView.render();
+            //$('#main-container').html(app.challengeView.render().el);
+            //app.challengeSlider = Swipe(document.getElementById('eh-clg-slider'),{continuous:false});
+            app.challengeView.refreshData();        
         }
         //$('#main-container').html(app.challengeView.render().el);
         
