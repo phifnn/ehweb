@@ -1,6 +1,6 @@
 app.views.ChallengeListView = Backbone.View.extend({
     initialize: function () {
-        this.listenTo(this.collection, 'reset', this.refreshData);        
+        this.listenTo(this.collection, 'reset', _.partial(this.refreshData,false));        
         this.collection.fetch({reset: true});
         this.render();
     },
@@ -90,7 +90,10 @@ app.views.ChallengeView = Backbone.View.extend({
         app.challengeSlider.setup();
        // $('.content', this.el).append(this.searchresultsView.render().el);
         if(this.options.advanceToNext){
-            app.challengeSlider.next();
+            $.when(app.challengeSlider.next()).done(function(){
+                this.$('#eh-clg-slider-list').find('li:first').remove();
+                app.challengeSlider.setup();
+            });            
         }
         return this;
     }
