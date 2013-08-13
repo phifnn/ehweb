@@ -1,7 +1,8 @@
 app.views.ChallengeListView = Backbone.View.extend({
     initialize: function () {
+        var test = '';
         this.listenTo(this.collection, 'reset', _.partial(this.refreshData,false));        
-        this.collection.fetch({reset: true});
+        this.collection.fetch({reset: true,headers:{"hSessionId":test}});
         this.render();
     },
 
@@ -9,7 +10,11 @@ app.views.ChallengeListView = Backbone.View.extend({
         //this.$el.html(this.template({data:this.collection.toJSON()}));
         this.$el.html(this.template());
        // $('.content', this.el).append(this.searchresultsView.render().el);
-        app.challengeSlider = Swipe(document.getElementById('eh-clg-slider'),{continuous:false});
+        app.challengeSlider = Swipe(document.getElementById('eh-clg-slider'),{continuous:false,transitionEnd: function(index, elem) {
+            //console.log("the index is:"+index);
+            $('#eh-clg-slider-list').find('li:first').remove();
+            //app.challengeSlider.setup();
+        }});
         return this;
     },
 
@@ -90,11 +95,14 @@ app.views.ChallengeView = Backbone.View.extend({
         app.challengeSlider.setup();
        // $('.content', this.el).append(this.searchresultsView.render().el);
         if(this.options.advanceToNext){
-            $.when(app.challengeSlider.next()).done(function(){
-                this.$('#eh-clg-slider-list').find('li:first').remove();
-                app.challengeSlider.setup();
-            });            
+            //$.when(app.challengeSlider.next()).done(function(){
+              //  this.$('#eh-clg-slider-list').find('li:first').remove();
+                //app.challengeSlider.setup();
+            //}); 
+            app.challengeSlider.next(); 
+            app.challengeSlider.setup();          
         }
+
         return this;
     }
 });
