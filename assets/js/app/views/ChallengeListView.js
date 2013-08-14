@@ -12,23 +12,26 @@ app.views.ChallengeListView = Backbone.View.extend({
        // $('.content', this.el).append(this.searchresultsView.render().el);
         app.challengeSlider = Swipe(document.getElementById('eh-clg-slider'),{continuous:false,transitionEnd: function(index, elem) {
             //console.log("the index is:"+index);
-            $('#eh-clg-slider-list').find('li:first').remove();
+            //$('#eh-clg-slider-list').find('li:first').remove();
             //app.challengeSlider.setup();
+            //app.challengeSlider.prev();
         }});
         return this;
     },
 
     events: {
-        "click label.eh-clg-radio":    "choiceSelection",
+        //"click label.eh-clg-radio":    "choiceSelection",
         //"keypress .search-key": "onkeypress"
+        'click input[type="radio"]':    "choiceSelection"
     },
 
     choiceSelection: function (event) {
         //event.currentTarget.checked=true;
         //var s = $(event.currentTarget).val();
         //console.log(event.currentTarget.value);
-        var id = $(event.currentTarget).attr('for');
-        $('#'+id).prop('checked',true);
+        console.log(event.type);
+        //var id = $(event.currentTarget).attr('for');
+        //$('#'+id).prop('checked',true);
         this.collection.viewIndex++;
         if(this.collection.viewIndex >= this.collection.length){
             //show the score orientation page.(first time user)
@@ -100,7 +103,7 @@ app.views.ChallengeView = Backbone.View.extend({
                 //app.challengeSlider.setup();
             //}); 
             app.challengeSlider.next(); 
-            app.challengeSlider.setup();          
+            //app.challengeSlider.setup();          
         }
 
         return this;
