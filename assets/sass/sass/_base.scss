@@ -236,7 +236,7 @@ body{
 #out-container {
     display: block;
     position: relative;
-    min-height: 400px;
+    min-height: 1200px;
     z-index: 5;
     background-color:$global-bg-color;
     @include transform(translate3D(0,0,0));
@@ -250,7 +250,7 @@ body{
 
 #content-container {
     position: absolute;
-    top: 44px;
+    top: 54px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -298,6 +298,7 @@ body{
   float:left;
   width:100%;
   position: relative;
+  list-style: none;
 }
 //Icon quiet buttons from topcoat io.
 /*
@@ -525,3 +526,43 @@ body{
   padding:10px;
   text-align:center;
 }
+
+.eh-tabs {
+  position: relative;   
+  min-height: 1200px; /* This part sucks */
+  clear: both;
+  margin: 25px 0;
+}
+.eh-tab {
+  float: left;
+  label{
+    background: #eee; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    margin-left: -1px; 
+    position: relative;
+    left: 1px;
+  }
+  [type=radio] {
+    display: none;
+  }
+  [type=radio]:checked ~ label {
+    background: white;
+    border-bottom: 1px solid white;
+    z-index: 2;
+  }
+  [type=radio]:checked ~ label ~ .eh-tab-content {
+    z-index: 1;
+  }
+}
+.eh-tab-content {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background: white;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  border: 1px solid #ccc; 
+}
+

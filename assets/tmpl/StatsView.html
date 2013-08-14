@@ -16,7 +16,14 @@
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div id="content-container">
 <div class="content">
-   <h2>Current </h2>
+<div class="eh-tabs">
+    
+   <div class="eh-tab">
+       <input type="radio" id="eh-tab-1" name="tab-group-1" checked>
+       <label for="eh-tab-1">Just me</label>
+       
+       <div class="eh-tab-content">
+           <h4>Current </h4>
    <div class="eh-table">
    <div class="eh-table-cell"><p>Correct</p><p>20</p></div>
    <div class="eh-table-cell"><p>In correct</p><p>20</p></div>
@@ -25,7 +32,7 @@
    </div>
    <div class="eh-table-cell"><div id="eh-stats-wheel">50%</div>
 </div>
-<h2>Overall</h2>
+<h4>Overall</h4>
     <div class="eh-table">
     <div class="eh-table-cell"><p>Correct</p><p>150</p></div>
     <div class="eh-table-cell"><p>In correct</p><p>40</p></div>
@@ -33,5 +40,21 @@
     <div class="eh-table-cell"><p>Points</p><p>150</p></div>    
 </div>
 <div class="eh-table-cell"><div id="eh-stats-wheel">75%</div></div>
+       </div> 
+   </div>
+    
+   <div class="eh-tab">
+       <input type="radio" id="eh-tab-2" name="tab-group-1">
+       <label for="eh-tab-2">Leaderboard</label>
+       
+       <div class="eh-tab-content">
+           stuff
+       </div> 
+   </div>
+    
+</div>
+
+
+   
 </div>
 </div>
