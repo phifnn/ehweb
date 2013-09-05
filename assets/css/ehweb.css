@@ -8,6 +8,7 @@ body {
   background-color: white;
   font-family: "Open Sans";
   font-weight: 400;
+  position: relative;
 }
 
 .hide {
@@ -72,6 +73,7 @@ body {
 }
 
 .content {
+  position: relative;
   background-color: white;
 }
 
@@ -226,7 +228,7 @@ body {
 }
 
 #nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 80%;
@@ -265,7 +267,7 @@ body {
 #out-container {
   display: block;
   position: relative;
-  min-height: 1200px;
+  min-height: 800px;
   z-index: 5;
   background-color: white;
   -webkit-transform: translate3D(0, 0, 0);

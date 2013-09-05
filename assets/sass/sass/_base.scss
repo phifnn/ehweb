@@ -5,7 +5,8 @@
 body{
 	background-color:$global-bg-color;
 	font-family: $font-family;
-    font-weight: $body-font-weight;
+  font-weight: $body-font-weight;
+  position:relative;
 }
 
 .hide {
@@ -63,6 +64,7 @@ body{
 }
 
 .content{
+    position:relative;
     background-color:$global-bg-color;
 }
 
@@ -203,7 +205,7 @@ body{
     }
 }
 #nav{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 80%;
@@ -236,7 +238,7 @@ body{
 #out-container {
     display: block;
     position: relative;
-    min-height: 1200px;
+    min-height: 800px;
     z-index: 5;
     background-color:$global-bg-color;
     @include transform(translate3D(0,0,0));
