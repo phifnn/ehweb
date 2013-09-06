@@ -110,9 +110,11 @@ app.views.ChallengeView = Backbone.View.extend({
               //  this.$('#eh-clg-slider-list').find('li:first').remove();
                 //app.challengeSlider.setup();
             //}); 
-            app.challengeSlider.next(); 
+          //  app.challengeSlider.next(); 
             //app.challengeSlider.setup();          
-        }
+        }//else{
+            //app.challengeSlider.setup();
+       // }
 
         return this;
     }
