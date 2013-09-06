@@ -9,6 +9,13 @@ body{
   position:relative;
 }
 
+/* Overthrow CSS:
+   Enable overflow: auto on elements with overthrow class when html element has overthrow class too */
+.overthrow-enabled .overthrow {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 .hide {
   display: none;
 }
@@ -255,9 +262,9 @@ body{
     top: 54px;
     left: 0;
     width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    height: 200px;
+    /*overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;*/
     background: #fff;
     z-index: -1; 
 }
@@ -452,10 +459,8 @@ body{
   }
   .eh-clg-question{
     padding:2px;
-    width:300px;
-    height:200px;
     img{
-      max-height:100%;
+      //max-height:100%;
       max-width:100%;
     }
   }  

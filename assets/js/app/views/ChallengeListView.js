@@ -9,6 +9,9 @@ app.views.ChallengeListView = Backbone.View.extend({
     render: function () {
         //this.$el.html(this.template({data:this.collection.toJSON()}));
         this.$el.html(this.template());
+        var dheight = document.documentElement.clientHeight;
+        $('#out-container').css('min-height',dheight+'px');
+        $('#content-container').css('height',(dheight-54)+'px');
        // $('.content', this.el).append(this.searchresultsView.render().el);
         app.challengeSlider = Swipe(document.getElementById('eh-clg-slider'),{continuous:false,transitionEnd: function(index, elem) {
             //console.log("the index is:"+index);
