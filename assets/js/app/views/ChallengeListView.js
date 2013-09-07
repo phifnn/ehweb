@@ -18,10 +18,11 @@ app.views.ChallengeListView = Backbone.View.extend({
             //console.log("the pos is:"+app.challengeSlider.getPos());
             //if(index >= 1){
                 //app.challengeSlider.kill();
-                $('#eh-clg-slider-list').find('li:first').remove();
-                app.challengeSlider.setup();
+                $('#eh-clg-slider-list li').eq(index-1).css('visibility','hidden');
+                //app.challengeSlider.setup();
                 //console.log("the pos is:"+app.challengeSlider.getPos());
                 //app.challengeSlider.next();
+                //app.challengeSlider
 
             //app.challengeSlider.trigger('transitionEnd'); 
             //}
