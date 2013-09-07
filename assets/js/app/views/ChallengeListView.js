@@ -15,15 +15,28 @@ app.views.ChallengeListView = Backbone.View.extend({
        // $('.content', this.el).append(this.searchresultsView.render().el);
         app.challengeSlider = Swipe(document.getElementById('eh-clg-slider'),{continuous:false,transitionEnd: function(index, elem) {
             //console.log("the index is:"+index);
-            if(index >= 1){
+            //console.log("the pos is:"+app.challengeSlider.getPos());
+            //if(index >= 1){
+                //app.challengeSlider.kill();
                 $('#eh-clg-slider-list').find('li:first').remove();
                 app.challengeSlider.setup();
-                app.challengeSlider.prev(); 
-            }
+                //console.log("the pos is:"+app.challengeSlider.getPos());
+                //app.challengeSlider.next();
+
+            //app.challengeSlider.trigger('transitionEnd'); 
+            //}
             //app.challengeSlider.slide(index,200);
             //app.challengeSlider.prev();
             //this.setup();
+            //app.challengeSlider.trigger('transitionEnd');
+
         }});
+        /*_.extend(app.challengeSlider,Backbone.Events);
+        app.challengeSlider.on("transitionEnd",function(){console.log('customevent');
+            //app.challengeSlider.kill();
+    $('#eh-clg-slider-list').find('li:first').remove();
+                app.challengeSlider.setup();
+            });*/
         return this;
     },
 
