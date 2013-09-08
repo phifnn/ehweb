@@ -13,31 +13,7 @@ app.views.ChallengeListView = Backbone.View.extend({
         $('#out-container').css('min-height',dheight+'px');
         $('#content-container').css('height',(dheight-54)+'px');
        // $('.content', this.el).append(this.searchresultsView.render().el);
-        app.challengeSlider = Swipe(document.getElementById('eh-clg-slider'),{continuous:false,transitionEnd: function(index, elem) {
-            //console.log("the index is:"+index);
-            //console.log("the pos is:"+app.challengeSlider.getPos());
-            //if(index >= 1){
-                //app.challengeSlider.kill();
-                $('#eh-clg-slider-list li').eq(index-1).css('visibility','hidden');
-                //app.challengeSlider.setup();
-                //console.log("the pos is:"+app.challengeSlider.getPos());
-                //app.challengeSlider.next();
-                //app.challengeSlider
-
-            //app.challengeSlider.trigger('transitionEnd'); 
-            //}
-            //app.challengeSlider.slide(index,200);
-            //app.challengeSlider.prev();
-            //this.setup();
-            //app.challengeSlider.trigger('transitionEnd');
-
-        }});
-        /*_.extend(app.challengeSlider,Backbone.Events);
-        app.challengeSlider.on("transitionEnd",function(){console.log('customevent');
-            //app.challengeSlider.kill();
-    $('#eh-clg-slider-list').find('li:first').remove();
-                app.challengeSlider.setup();
-            });*/
+        
         return this;
     },
 
@@ -80,6 +56,13 @@ app.views.ChallengeListView = Backbone.View.extend({
     refreshData: function(advNext){
         var index = this.collection.viewIndex;
         var challenge = this.collection.at(index);
+        app.challengeSlider = Swipe(document.getElementById('eh-clg-slider'),{continuous:false,transitionEnd: function(index, elem) {
+            console.log("the index is:"+index);
+            if(index >= 1){
+                app.challengeSlider.kill();                
+                $('#eh-clg-slider-list li').eq(index-1).remove();                 
+            }            
+        }});
         var newSlide = new app.views.ChallengeView({model:challenge,el:document.getElementById('eh-clg-slider-list'),
                                                     advanceToNext:advNext});
         newSlide.render();
