@@ -60,7 +60,8 @@ app.views.ChallengeListView = Backbone.View.extend({
             console.log("the index is:"+index);
             if(index >= 1){
                 app.challengeSlider.kill();                
-                $('#eh-clg-slider-list li').eq(index-1).remove();                 
+                $('#eh-clg-slider-list li').eq(index-1).remove();  
+                //app.challengeSlider.setup();               
             }            
         }});
         var newSlide = new app.views.ChallengeView({model:challenge,el:document.getElementById('eh-clg-slider-list'),
