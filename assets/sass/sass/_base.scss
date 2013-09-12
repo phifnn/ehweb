@@ -497,6 +497,7 @@ body{
 
   }
 //Settings category selections
+/*
 #eh-set-cat-sel-list li{
   padding:0px;
 }
@@ -512,6 +513,45 @@ body{
 }
 #eh-set-cat-sel-list input[type="checkbox"]:checked + i{
     opacity:1;
+}
+*/
+//Settings category selections
+#eh-set-cat-sel-list li{
+  padding:0px;
+  display:table;
+  width:100%;
+  table-layout:fixed;
+  
+}
+#eh-set-cat-sel-list label{
+  display:table-cell;
+  vertical-align:middle;
+  width:100%;
+  background:#f3f3f3;
+  border-top:2px solid #fff;
+  border-right:2px solid #fff;
+  border-left:2px solid #fff;
+  padding-left:12px;
+  height:88px;
+}
+
+#eh-set-cat-sel-list label:after {
+   content:"";
+   visibility:hidden;
+   position: absolute;
+   top: 10px;
+   right: 10px;    
+   //@include iconfromsprite($sprite,-750px center,no-repeat,transparent);
+   background: transparent url('../img/icons.png') no-repeat -750px center;
+    background-size:cover;
+    width:50px;
+    height:50px;
+    display:inline-block;    
+   @include single-transition(visibility,0.1s,linear,0);   
+}
+
+#eh-set-cat-sel-list input[type="checkbox"]:checked ~ label:after{
+    visibility:visible;
 }
 
 //Stats styles
