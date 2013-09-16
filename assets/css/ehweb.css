@@ -609,7 +609,7 @@ body {
   transition: visibility 0.1s linear 0;
 }
 
-#eh-set-cat-sel-list input[type="checkbox"]:checked ~ label:after {
+#eh-set-cat-sel-list input[type="checkbox"]:checked + label:after {
   visibility: visible;
 }
 
