@@ -27,6 +27,7 @@ app.views.ChallengeListView = Backbone.View.extend({
     handlePinchZoom: function(event){
         var e = event.originalEvent;
         console.log(e);
+        $(e.currentTarget).css('webkit-transform','scale(1)');
     },
 
     choiceSelection: function (event) {
