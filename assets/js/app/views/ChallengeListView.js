@@ -25,7 +25,7 @@ app.views.ChallengeListView = Backbone.View.extend({
     },
 
     handlePinchZoom: function(event){
-        var e = event.originalEvent();
+        var e = event.originalEvent;
         console.log(e);
     },
 
