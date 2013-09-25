@@ -566,12 +566,7 @@ input[type=checkbox]:checked+label:after{
     color:$secondary-color;
     @include single-transition(opacity,0,linear,0);  
 }
-<<<<<<< HEAD
-#eh-set-cat-sel-list input[type=checkbox]:checked+label:after{
-    //opacity:1;
-    visibility:visible;
-}*/
-=======
+
 #eh-set-cat-sel-list input[type="checkbox"]:checked + i{
     opacity:1;
 }
@@ -614,7 +609,7 @@ input[type=checkbox]:checked+label:after{
 #eh-set-cat-sel-list input[type="checkbox"]:checked + label:after{
     visibility:visible;
 }
->>>>>>> 5fed5e74faeabb833a157346a2b6d95cc2bc44b6
+
 
 //Stats styles
 #eh-stats-wheel{
