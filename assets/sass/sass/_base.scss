@@ -212,21 +212,21 @@ body{
     }
 }
 #nav{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 80%;
     height: 100%;
-    z-index: 1;
+    //z-index: 1;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     background-color:$global-bg-color;
     background-image:url('../img/bgDark.png');
-    @include single-transition(opacity,0.25s,ease-in-out,0);
-}
+    //@include single-transition(opacity,0.25s,ease-in-out,0);
+}/*
 #nav-handler:checked ~ #nav {
     opacity:1;
-}
+}*/
 #nav ul li{
     display: block;
     clear: both;
@@ -246,27 +246,27 @@ body{
     display: block;
     position: relative;
     min-height: 800px;
-    z-index: 5;
+    //z-index: 5;
     background-color:$global-bg-color;
     @include transform(translate3D(0,0,0));
     @include transition(transform, .25s,ease-in-out);     
 }
 
 /* Translate main container when nav handler is checked */
-#nav-handler:checked ~ #out-container {
+#nav-handler:checked + nav:nth-of-type(1) + #out-container {
     @include transform(translate3D(80%,0,0)); /* X value must be same as Nav width */   
 }
 
 #content-container {
-    position: absolute;
-    top: 54px;
+    position: relative;
+    top: 0px;
     left: 0;
     width: 100%;
     height: 200px;
     /*overflow-y: scroll;
     -webkit-overflow-scrolling: touch;*/
     background: #fff;
-    z-index: -1; 
+    //z-index: -1; 
 }
 //Remember me checkbox.
 #remember-me{
@@ -498,21 +498,77 @@ body{
   }
 //Settings category selections
 #eh-set-cat-sel-list li{
-  padding:0px;
+  //padding:0px;
+  display:table;
+  width:100%;
+  table-layout:fixed;
+  label{
+  display:table-cell;
+  width:90%;
+  height:90px;
+  vertical-align:middle;
+  font-size:15px;
+  font-family:sans-serif;
+  background:#f2f2f2;
+  border-bottom:2px solid #fff;
+  border-left:2px solid #fff;
+  border-right:2px solid #fff;
+  padding-left:12px;  
+  list-style: none;
+  &:after{
+    content:"";
+    position:absolute;
+    background-color:transparent;
+    background-image:url('../img/icons.png');
+    background-position:-1515px center;
+    width:50px;
+    height:90px;
+    top:0px;
+    left:0px;
+    visibility:hidden;
+    display:block;
+  }
 }
+input[type=checkbox]:checked+label:after{
+    //opacity:1;
+    visibility:visible;
+}
+}/*
 #eh-set-cat-sel-list label{
-  display:inline-block;
-  padding: 20px 60px 20px 10px;
-  width:80%;
-}
+  display:table-cell;
+  width:90%;
+  height:90px;
+  vertical-align:middle;
+  font-size:15px;
+  font-family:sans-serif;
+  background:#f2f2f2;
+  border-bottom:2px solid #fff;
+  border-left:2px solid #fff;
+  border-right:2px solid #fff;
+  padding-left:12px;
+  &:after{
+    content:"";
+    position:absolute;
+    background-color:transparent;
+    background-image:url('../img/icons.png');
+    background-position:-1515px center;
+    width:50px;
+    height:90px;
+    top:0px;
+    left:0px;
+    visibility:hidden;
+    display:block;
+  }
+}*//*
 #eh-set-cat-sel-list i{
     opacity:0;    
     color:$secondary-color;
     @include single-transition(opacity,0,linear,0);  
 }
-#eh-set-cat-sel-list input[type="checkbox"]:checked + i{
-    opacity:1;
-}
+#eh-set-cat-sel-list input[type=checkbox]:checked+label:after{
+    //opacity:1;
+    visibility:visible;
+}*/
 
 //Stats styles
 #eh-stats-wheel{
