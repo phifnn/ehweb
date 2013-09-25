@@ -1,682 +1,76 @@
-@charset "UTF-8";
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-body {
-  background-color: white;
-  font-family: "Open Sans";
-  font-weight: 400;
-  position: relative;
-}
-
-/* Overthrow CSS:
-   Enable overflow: auto on elements with overthrow class when html element has overthrow class too */
-.overthrow-enabled .overthrow {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.hide {
-  display: none;
-}
-
-.hidev {
-  visibility: hidden;
-}
-
-.hide.active, .show {
-  display: block;
-}
-
-.fixed {
-  position: fixed;
-}
-.fixed.pinned {
-  position: absolute;
-}
-
-.unfixed {
-  position: relative !important;
-  top: auto !important;
-  left: auto !important;
-}
-
-.quarter {
-  width: 25%;
-}
-
-.half {
-  width: 50%;
-}
-
-.three-quarters {
-  width: 75%;
-}
-
-.third {
-  width: 33.333%;
-}
-
-.two-thirds {
-  width: 66.666%;
-}
-
-.full {
-  width: 100%;
-}
-
-.left {
-  text-align: left;
-}
-
-.center {
-  text-align: center;
-}
-
-.right {
-  text-align: right;
-}
-
-.content {
-  position: relative;
-  background-color: white;
-}
-
-.eh-bg {
-  background-image: url("../img/bgLight.png");
-}
-
-.flatten-input {
-  border-radius: 0px;
-  box-shadow: none;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.bar-title {
-  font-family: "Open Sans";
-  font-weight: 300;
-  background-color: #21698f;
-  border: none;
-  background-image: none;
-  box-shadow: none;
-  text-shadow: none;
-  border-radius: 0px;
-}
-.bar-title .title {
-  font-family: "Open Sans";
-  font-weight: 300;
-}
-
-.bar-footer {
-  border: none;
-  /* height:inherit;*/
-}
-
-[class*="button"] {
-  font-family: "Open Sans";
-  font-weight: 600;
-  border: none;
-  background-image: none;
-  box-shadow: none;
-  text-shadow: none;
-  border-radius: 0px;
-}
-[class*="button"]:active {
-  background-color: #CCC;
-}
-
-.button-main {
-  background-color: #f2f2f2;
-  color: #34495e;
-}
-.button-main:active {
-  background-color: #a5a5a5;
-}
-
-.button-positive {
-  background-color: #41a2d4;
-  color: white;
-}
-.button-positive:active {
-  background-color: #174b65;
-}
-
-.button-negative {
-  background-color: #ffa800;
-  color: white;
-}
-.button-negative:active {
-  background-color: #a5a5a5;
-}
-
-.button-green {
-  background-color: #1abc9c;
-  color: white;
-}
-.button-green:active {
-  background-color: #a5a5a5;
-}
-
-.button-info {
-  background-color: #bdc3c7;
-  color: white;
-}
-.button-info:active {
-  background-color: #a5a5a5;
-}
-
-.button-navbar {
-  background: transparent;
-  color: white;
-  border-bottom: 3px groove #787878;
-}
-.button-navbar:active {
-  background-color: black;
-}
-
-.bar-title [class*="btn-hdr-symbol"] {
-  border: none;
-  background-image: none;
-  box-shadow: none;
-  text-shadow: none;
-  border-radius: 0px;
-  background-color: #21698f;
-  color: white;
-  font-size: 18px;
-}
-
-/* Hide nav handler checkbox */
-#nav-handler {
-  display: none;
-}
-
-/* Header */
-#header {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
-  background: #21698f;
-  color: white;
-  border: none;
-  background-image: none;
-  box-shadow: none;
-  text-shadow: none;
-  border-radius: 0px;
-  display: table;
-}
-#header .title {
-  font-family: "Open Sans";
-  font-weight: 300;
-  width: 70%;
-  text-align: center;
-  display: table-cell;
-  padding: 12px;
-  vertical-align: top;
-}
-#header label {
-  color: #41a2d4;
-  display: table-cell;
-  width: 15%;
-  padding: 12px;
-  vertical-align: top;
-}
-#header div {
-  width: 15%;
-  display: table-cell;
-  padding: 12px;
-  vertical-align: top;
-}
-
-#nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 100%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  background-color: white;
-  background-image: url("../img/bgDark.png");
-}
-
- /*
-#nav-handler:checked ~ #nav {
-    opacity:1;
-}*/
-#nav ul li {
-  display: block;
-  clear: both;
-}
-#nav ul li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 1px;
-  padding: 10px;
-  text-align: left;
-  font-size: 20px;
-  line-height: 2;
-}
-
-#out-container {
-  display: block;
-  position: relative;
-  min-height: 800px;
-  background-color: white;
-  -webkit-transform: translate3D(0, 0, 0);
-  -moz-transform: translate3D(0, 0, 0);
-  -ms-transform: translate3D(0, 0, 0);
-  -o-transform: translate3D(0, 0, 0);
-  transform: translate3D(0, 0, 0);
-  -webkit-transition: -webkit-transform, 0.25s, ease-in-out;
-  -moz-transition: -moz-transform, 0.25s, ease-in-out;
-  -o-transition: -o-transform, 0.25s, ease-in-out;
-  transition: transform, 0.25s, ease-in-out;
-}
-
-/* Translate main container when nav handler is checked */
-#nav-handler:checked + nav:nth-of-type(1) + #out-container {
-  -webkit-transform: translate3D(80%, 0, 0);
-  -moz-transform: translate3D(80%, 0, 0);
-  -ms-transform: translate3D(80%, 0, 0);
-  -o-transform: translate3D(80%, 0, 0);
-  transform: translate3D(80%, 0, 0);
-  /* X value must be same as Nav width */
-}
-
-#content-container {
-  position: relative;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  /*overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;*/
-  background: #fff;
-}
-
-#remember-me {
-  display: none;
-}
-
-#remember-me-tick {
-  opacity: 0;
-  font-size: 18px;
-  color: #41a2d4;
-  -webkit-transition: opacity 0.25s linear;
-  -webkit-transition-delay: 0;
-  -moz-transition: opacity 0.25s linear 0;
-  -o-transition: opacity 0.25s linear 0;
-  transition: opacity 0.25s linear 0;
-}
-
-#remember-me:checked + #remember-me-tick {
-  opacity: 1;
-}
-
-.check-label {
-  display: inline-block;
-  color: #41a2d4;
-  padding: 10px;
-}
-
-.swipe {
-  overflow: hidden;
-  visibility: hidden;
-  position: relative;
-}
-
-.swipe-wrap {
-  overflow: hidden;
-  position: relative;
-}
-
-.swipe-wrap > div {
-  float: left;
-  width: 100%;
-  position: relative;
-}
-.swipe-wrap > div img {
-  max-width: 300px;
-}
-
-.swipe-wrap > li {
-  float: left;
-  width: 100%;
-  position: relative;
-  list-style: none;
-}
-
 /*
- Icon Button
- -----------
+Syntax error: Invalid CSS after "}*/": expected selector or at-rule, was "======="
+        on line 574 of /Users/anbu/WEB/mobile/ehweb/assets/sass/sass/_base.scss
+        from line 7 of /Users/anbu/WEB/mobile/ehweb/assets/sass/sass/ehweb.scss
 
- :active - Active state
-
- .is-active - Simulates an active state on mobile devices
-
- :disabled - Disabled state
-
- .is-disabled - Simulates a disabled state on mobile devices
-
-    <a class="tc-icon-btn">
-        <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-    </a>
-
-    <a class="tc-icon-btn is-active">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-    </a>
-
-    <a class="tc-icon-btn is-disabled">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-    </a>
+Backtrace:
+/Users/anbu/WEB/mobile/ehweb/assets/sass/sass/_base.scss:574
+/Users/anbu/WEB/mobile/ehweb/assets/sass/sass/ehweb.scss:7
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:1148:in `expected'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:1084:in `expected'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/scss/parser.rb:28:in `parse'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/engine.rb:342:in `_to_tree'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/engine.rb:274:in `to_tree'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:225:in `visit_import'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:128:in `visit_root'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/engine.rb:315:in `_render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.9/lib/sass/../sass/engine.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/Library/Ruby/Site/1.8/rubygems/core_ext/kernel_require.rb:51:in `to_proc'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `modified'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `each'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `loop'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:30
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44:in `call'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44
+/usr/bin/compass:23:in `load'
+/usr/bin/compass:23
 */
-.tc-icon-btn,
-.tc-icon-btn--quiet,
-.tc-icon-btn--large,
-.tc-icon-btn--large--quiet,
-.tc-icon-btn-hdr,
-.tc-icon-btn-choice {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  cursor: default;
-  white-space: nowrap;
-  overflow: hidden;
-  line-height: 40px;
-  letter-spacing: 1px;
-  color: #41a2d4;
-  vertical-align: baseline;
-  background-color: #21698f;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-background-clip: padding;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  text-shadow: none;
-}
-
-.tc-icon-btn:active,
-.tc-icon-btn.is-active {
-  background-color: #1abc9c;
-}
-
-.tc-icon-btn:disabled,
-.tc-icon-btn.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-
-/*
- Quiet Icon Button
- -----------------
-
- :active - Button active state
-
- .is-active - Simulates active state for a button on touch interfaces
-
- :disabled - Disabled state
-
- .is-disabled - Simulates disabled state
-
-    <a class="tc-icon-btn--quiet">
-        <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-    </a>
-
-    <a class="tc-icon-btn--quiet is-active">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-    </a>
-
-    <a class="tc-icon-btn--quiet is-disabled">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-    </a>
-*/
-.tc-icon-btn--quiet {
-  background: transparent;
-}
-
-.tc-icon-btn--quiet:active,
-.tc-icon-btn--quiet.is-active,
-.tc-icon-btn--large--quiet:active,
-.tc-icon-btn--large--quiet.is-active {
-  color: #454545;
-  text-shadow: 0 1px #fff;
-  background-color: #d3d7d7;
-  border: 1px solid #a5a8a8;
-  -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.12);
-}
-
-.tc-icon-btn--quiet:disabled,
-.tc-icon-btn--quiet.is-disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-}
-
-.tc-icon-btn-choice {
-  background-color: #41a2d4;
-  color: white;
-  line-height: 24px;
-  text-align: center;
-  white-space: normal;
-  height: 100%;
-  -webkit-transition: background-color 0 linear;
-  -webkit-transition-delay: 0;
-  -moz-transition: background-color 0 linear 0;
-  -o-transition: background-color 0 linear 0;
-  transition: background-color 0 linear 0;
-}
-
-.eh-challenge {
-  position: relative;
-}
-.eh-challenge .eh-clg-choices {
-  border: 2px solid #fff;
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-.eh-challenge .eh-clg-choices label {
-  display: table-cell;
-  width: 50%;
-  padding-right: 2px;
-  vertical-align: top;
-  height: 70px;
-}
-.eh-challenge .eh-clg-choices input[type="radio"]:checked + span {
-  background-color: #1abc9c;
-}
-.eh-challenge .eh-clg-question {
-  padding: 2px;
-}
-.eh-challenge .eh-clg-question img {
-  max-width: 100%;
-}
-
-.eh-clg-report {
-  position: absolute;
-  left: 4px;
-  bottom: 4px;
-  padding-top: 2px;
-  padding-right: 2px;
-  background-color: #e53237;
-  color: white;
-  width: 52px;
-  height: 52px;
-}
-
-.eh-clg-cnter {
-  position: absolute;
-  right: 28px;
-  bottom: 4px;
-  padding-top: 2px;
-  padding-left: 2px;
-  background-color: white;
-  color: #34495e;
-  width: 52px;
-  height: 52px;
-  display: table-cell;
-  text-align: center;
-}
-.eh-clg-cnter .cnt-text {
-  font-size: 20px;
-  color: #ffa800;
-}
-
-#eh-set-cat-sel-list li {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-#eh-set-cat-sel-list li label {
-  display: table-cell;
-  width: 90%;
-  height: 90px;
-  vertical-align: middle;
-  font-size: 15px;
-  font-family: sans-serif;
-  background: #f2f2f2;
-  border-bottom: 2px solid #fff;
-  border-left: 2px solid #fff;
-  border-right: 2px solid #fff;
-  padding-left: 12px;
-  list-style: none;
-}
-#eh-set-cat-sel-list li label:after {
-  content: "";
-  position: absolute;
-  background-color: transparent;
-  background-image: url("../img/icons.png");
-  background-position: -1515px center;
-  width: 50px;
-  height: 90px;
-  top: 0px;
-  left: 0px;
-  visibility: hidden;
-  display: block;
-}
-#eh-set-cat-sel-list li input[type=checkbox]:checked + label:after {
-  visibility: visible;
-}
-
- /*
-#eh-set-cat-sel-list label{
-  display:table-cell;
-  width:90%;
-  height:90px;
-  vertical-align:middle;
-  font-size:15px;
-  font-family:sans-serif;
-  background:#f2f2f2;
-  border-bottom:2px solid #fff;
-  border-left:2px solid #fff;
-  border-right:2px solid #fff;
-  padding-left:12px;
-  &:after{
-    content:"";
-    position:absolute;
-    background-color:transparent;
-    background-image:url('../img/icons.png');
-    background-position:-1515px center;
-    width:50px;
-    height:90px;
-    top:0px;
-    left:0px;
-    visibility:hidden;
-    display:block;
-  }
-}*/
-   /*
-#eh-set-cat-sel-list i{
-    opacity:0;    
-    color:$secondary-color;
-    @include single-transition(opacity,0,linear,0);  
-}
-#eh-set-cat-sel-list input[type=checkbox]:checked+label:after{
-    //opacity:1;
-    visibility:visible;
-}*/
-#eh-stats-wheel {
-  width: 50px;
-  height: 50px;
-  border-top: 15px solid #ccc;
-  border-bottom: 15px solid #27ae60;
-  border-left: 15px solid #e74c3c;
-  border-right: 15px solid #27ae60;
-  border-radius: 100px;
-}
-
-.eh-table {
-  display: table;
-}
-
-.eh-table-cell {
-  display: table-cell;
-  padding: 10px;
-  text-align: center;
-}
-
-.eh-tabs {
-  position: relative;
-  min-height: 1200px;
-  /* This part sucks */
-  clear: both;
-  margin: 25px 0;
-}
-
-.eh-tab {
-  float: left;
-}
-.eh-tab label {
-  background: #eee;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin-left: -1px;
-  position: relative;
-  left: 1px;
-}
-.eh-tab [type=radio] {
-  display: none;
-}
-.eh-tab [type=radio]:checked ~ label {
-  background: white;
-  border-bottom: 1px solid white;
-  z-index: 2;
-}
-.eh-tab [type=radio]:checked ~ label ~ .eh-tab-content {
-  z-index: 1;
-}
-
-.eh-tab-content {
-  position: absolute;
-  top: 28px;
-  left: 0;
-  background: white;
-  right: 0;
-  bottom: 0;
-  padding: 20px;
-  border: 1px solid #ccc;
-}
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"}*/\": expected selector or at-rule, was \"=======\"\A         on line 574 of /Users/anbu/WEB/mobile/ehweb/assets/sass/sass/_base.scss\A         from line 7 of /Users/anbu/WEB/mobile/ehweb/assets/sass/sass/ehweb.scss"; }

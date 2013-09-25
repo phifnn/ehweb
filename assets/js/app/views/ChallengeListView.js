@@ -20,7 +20,14 @@ app.views.ChallengeListView = Backbone.View.extend({
     events: {
         //"click label.eh-clg-radio":    "choiceSelection",
         //"keypress .search-key": "onkeypress"
-        'change input[type="radio"]':    "choiceSelection"
+        'change input[type="radio"]':    "choiceSelection",
+        'gestureend img.eh-clg-image': "handlePinchZoom"
+    },
+
+    handlePinchZoom: function(event){
+        var e = event.originalEvent;
+        console.log(e);
+        $(e.currentTarget).css('webkit-transform','scale(1)');
     },
 
     choiceSelection: function (event) {
